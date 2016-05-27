@@ -8,30 +8,34 @@ use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
 use Zend\Expressive\Router;
 
-class MiddlewaresAction
+class MiddlewareDetailsAction
 {
-    /** @var Router\RouterInterface $router */
     private $router;
+
     /** @var MiddlewareService $middlewareService */
     private $middlewareService;
 
-    /**
-     * MiddlewaresAction constructor.
-     * @param Router\RouterInterface $router
-     * @param MiddlewareService $middlewareService
-     */
+
     public function __construct(Router\RouterInterface $router, MiddlewareService $middlewareService)
     {
-        $this->router = $router;
+        $this->router   = $router;
         $this->middlewareService = $middlewareService;
     }
 
-
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)
     {
-        $data = $this->middlewareService->getMiddlewares();
+        $slug = $request->getAttribute('middleware-slug');
 
-        return new JsonResponse($data);
+        $middleware = $this->middlewareService->getMiddleware($slug);
+        if ($middleware === false) {
+            $resp = new JsonResponse([
+                'message' => "No middleware found with slug: $slug"
+            ]);
+            $resp = $resp ->withStatus(404);
 
+            return $resp;
+        }
+
+        return new JsonResponse($middleware);
     }
 }
