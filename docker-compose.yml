@@ -3,7 +3,7 @@ services:
   php:
     build: .
     volumes:
-      - ./src:/var/www/html/:ro
+      - ./src:/var/www/html/
     ports:
       - 80:80
     networks:
