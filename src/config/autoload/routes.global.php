@@ -8,6 +8,7 @@ return [
         ],
         'factories' => [
             App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
+            App\Action\MiddlewaresAction::class => App\Action\MiddlewaresFactory::class,
         ],
     ],
 
@@ -19,9 +20,9 @@ return [
             'allowed_methods' => ['GET'],
         ],
         [
-            'name' => 'api.ping',
-            'path' => '/api/ping',
-            'middleware' => App\Action\PingAction::class,
+            'name' => 'middlewares',
+            'path' => '/v1/middlewares',
+            'middleware' => App\Action\MiddlewaresAction::class,
             'allowed_methods' => ['GET'],
         ],
     ],
