@@ -18,7 +18,7 @@ class MiddlewareDetailsAction
 
     public function __construct(Router\RouterInterface $router, MiddlewareService $middlewareService)
     {
-        $this->router   = $router;
+        $this->router = $router;
         $this->middlewareService = $middlewareService;
     }
 

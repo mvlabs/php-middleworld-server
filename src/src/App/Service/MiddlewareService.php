@@ -4,26 +4,14 @@ namespace App\Service;
 
 class MiddlewareService
 {
-    private $data = [
-        'access-log' => [
-            'author' => 'oscarotero',
-            'slug' => 'access-log',
-            'abstract' => 'Access Log Middleware',
-            'url' => 'https://github.com/oscarotero/psr7-middlewares/blob/master/src/Middleware/AccessLog.php',
-        ],
-        'cors' => [
-            'author' => 'oscarotero',
-            'slug' => 'cors',
-            'abstract' => 'CORS Middleware',
-            'url' => 'https://github.com/oscarotero/psr7-middlewares/blob/master/src/Middleware/Cors.php',
-        ]
-    ];
+    private $data;
 
     /**
      * MiddlewareService constructor.
      */
-    public function __construct()
+    public function __construct($data)
     {
+        $this->data = json_decode(file_get_contents($data));
     }
 
     public function getMiddlewares()
@@ -33,9 +21,12 @@ class MiddlewareService
 
     public function getMiddleware($middlewareSlug)
     {
-        if (array_key_exists($middlewareSlug, $this->data)) {
-            return $this->data[$middlewareSlug];
+        foreach ($this->data as $middleware) {
+            if ($middleware->slug === $middlewareSlug) {
+                return $middleware;
+            }
         }
+
         return false;
     }
 }

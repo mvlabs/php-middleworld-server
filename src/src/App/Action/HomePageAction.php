@@ -13,7 +13,7 @@ class HomePageAction
 
     public function __construct(Router\RouterInterface $router)
     {
-        $this->router   = $router;
+        $this->router = $router;
     }
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)

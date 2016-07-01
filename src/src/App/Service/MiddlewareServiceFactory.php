@@ -15,6 +15,8 @@ class MiddlewareServiceFactory
 {
     public function __invoke(ContainerInterface $container)
     {
-        return new MiddlewareService();
+        $data = $container->get('config')['middleware']['data'];
+
+        return new MiddlewareService($data);
     }
 }
