@@ -25,9 +25,7 @@ class MiddlewareService
         
         for ($i=0; $i < sizeof($this->data); $i++) { 
             $arr = explode ( '/' , $this->data[$i]->packagistUrl );
-            $start = microtime(true);
             $requests[$i] = $this->client->getAsync( 'https://packagist.org/packages/' . $arr[4] . "/" . $arr[5] . ".json" );
-            echo (microtime(true) - $start) . "\n";
         }
         
         // Wait on all of the requests to complete. Throws a ConnectException if any of the requests fail
@@ -85,15 +83,11 @@ class MiddlewareService
                 $arr = explode ( '/' , $middleware->packagistUrl ); //4 author - 5 packageName
 
                 //send a GET request
-                //$response = $this->client->request('GET', 'https://packagist.org/packages/' . $arr[4] . "/" . $arr[5] . ".json");
-
-                $response = file_get_contents("https://packagist.org/packages/" . $arr[4] . "/" . $arr[5] . ".json");
-
-                //echo (microtime(true) - $start) . "\n";
+                $response = $this->client->request('GET', 'https://packagist.org/packages/' . $arr[4] . "/" . $arr[5] . ".json");
 
                 //decode the JSON response
-                //$parsedResponse = json_decode($response->getBody());
-                $parsedResponse = json_decode($response);
+                $parsedResponse = json_decode($response->getBody());
+
                 //update stars and DL values before returning
                 $middleware->stars = strval($parsedResponse->package->github_stars);
                 $middleware->downloads = strval($parsedResponse->package->downloads->total);
