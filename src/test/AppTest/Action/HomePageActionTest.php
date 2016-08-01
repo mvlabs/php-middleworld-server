@@ -9,7 +9,9 @@ use Zend\Expressive\Router\RouterInterface;
 
 class HomePageActionTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var RouterInterface */
+    /**
+     * @var RouterInterface
+     */
     protected $router;
 
     protected function setUp()

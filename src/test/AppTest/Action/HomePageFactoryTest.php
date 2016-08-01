@@ -10,7 +10,9 @@ use Zend\Expressive\Template\TemplateRendererInterface;
 
 class HomePageFactoryTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var ContainerInterface */
+    /**
+     * @var ContainerInterface
+     */
     protected $container;
 
     protected function setUp()

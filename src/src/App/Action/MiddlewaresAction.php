@@ -6,29 +6,43 @@ use App\Service\MiddlewareService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
-use Zend\Expressive\Router;
+use Zend\Expressive\Router\RouterInterface;
 
 class MiddlewaresAction
 {
-    /** @var Router\RouterInterface $router */
+    /**
+     * @var RouterInterface
+     */
     private $router;
-    /** @var MiddlewareService $middlewareService */
+
+    /**
+     * @var MiddlewareService
+     */
     private $middlewareService;
 
     /**
-     * MiddlewaresAction constructor.
-     * @param Router\RouterInterface $router
+     * @param RouterInterface $router
      * @param MiddlewareService $middlewareService
      */
-    public function __construct(Router\RouterInterface $router, MiddlewareService $middlewareService)
-    {
+    public function __construct(
+        RouterInterface $router,
+        MiddlewareService $middlewareService
+    ) {
         $this->router = $router;
         $this->middlewareService = $middlewareService;
     }
 
-
-    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)
-    {
+    /**
+     * @param ServerRequestInterface $request
+     * @param ResponseInterface $response
+     * @param callable|null $next
+     * @return JsonResponse
+     */
+    public function __invoke(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        callable $next = null
+    ) {
         $data = $this->middlewareService->getMiddlewares();
 
         return new JsonResponse($data);

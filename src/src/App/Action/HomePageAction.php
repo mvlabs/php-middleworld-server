@@ -5,19 +5,34 @@ namespace App\Action;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
-use Zend\Expressive\Router;
+use Zend\Expressive\Router\RouterInterface;
 
 class HomePageAction
 {
+    /**
+     * @var RouterInterface
+     */
     private $router;
 
-    public function __construct(Router\RouterInterface $router)
+    /**
+     * @param RouterInterface $router
+     */
+    public function __construct(RouterInterface $router)
     {
         $this->router = $router;
     }
 
-    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)
-    {
+    /**
+     * @param ServerRequestInterface $request
+     * @param ResponseInterface $response
+     * @param callable|null $next
+     * @return JsonResponse
+     */
+    public function __invoke(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        callable $next = null
+    ) {
         $data = [];
 
         return new JsonResponse([
