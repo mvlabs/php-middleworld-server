@@ -20,12 +20,12 @@ class MiddlewareService
     private $client;
 
     /**
-     * @param string $data the path to the json file with the middleware data
+     * @param string $data
      */
-    public function __construct($data)
+    public function __construct($data, Client $client)
     {
-        $this->data = json_decode(file_get_contents($data));
-        $this->client = new Client();
+        $this->data = $data;
+        $this->client = $client;
     }
 
     /**
@@ -37,35 +37,31 @@ class MiddlewareService
         $requests = [];
         //setting values for requests array
 
-        for ($i=0; $i < sizeof($this->data); $i++) {
-            $arr = explode ( '/' , $this->data[$i]->packagistUrl );
-            $requests[$i] = $this->client->getAsync( 'https://packagist.org/packages/' . $arr[4] . "/" . $arr[5] . ".json" );
+        foreach ($this->data as $key => $middleware) {
+            $requests[$key] = $this->client->getAsync($middleware->packagistUrl);
         }
 
         // Wait on all of the requests to complete. Throws a ConnectException if any of the requests fail
-        // ASK HOW TO CORRECTLY MANAGE IT!
-        try{
+        try {
             $results = Promise\unwrap($requests);
-        } catch(Exception $e) {
+        } catch (Exception $e) {
             return false;
         }
 
-        $retData = $this->data; // is this right?
-
         // Update and return middlewares with correct data
-        for ($j=0; $j < sizeof($results); $j++) {
-            $parsedResponse = json_decode($results[$j]->getBody());
-            $retData[$j]->stars = strval($parsedResponse->package->github_stars);
-            $retData[$j]->downloads = strval($parsedResponse->package->downloads->total);
+        foreach ($results as $key => $result) {
+            $parsedResponse = json_decode($result->getBody());
+            $this->data[$key]->stars = strval($parsedResponse->package->github_stars);
+            $this->data[$key]->downloads = strval($parsedResponse->package->downloads->total);
         }
 
-        return array_values($retData);
+        return $this->data;
     }
 
     /**
      * @return array
      */
-    public function getMiddlewaresTest() //test with async non-concurrent requests
+    /*public function getMiddlewaresTest() //test with async non-concurrent requests
     {
         $retData = $this->data; // is this right?
         $parsedResponses = [];
@@ -88,7 +84,7 @@ class MiddlewareService
             $promise->wait();
         }
         return array_values($retData);
-    }
+    }*/
 
     /**
      * @param string $middlewareSlug name of the slug
@@ -98,12 +94,8 @@ class MiddlewareService
     {
         foreach ($this->data as $middleware) {
             if ($middleware->slug === $middlewareSlug) {
-
-                //find request parameters from packagistUrl
-                $arr = explode ( '/' , $middleware->packagistUrl ); //4 author - 5 packageName
-
                 //send a GET request
-                $response = $this->client->request('GET', 'https://packagist.org/packages/' . $arr[4] . "/" . $arr[5] . ".json");
+                $response = $this->client->request('GET', $middleware->packagistUrl);
 
                 //decode the JSON response
                 $parsedResponse = json_decode($response->getBody());
@@ -123,7 +115,7 @@ class MiddlewareService
      * @param string $middlewareSlug
      * @return mixed returns the middleware on success, false on failure
      */
-    public function getMiddlewareTest($middlewareSlug) //test with file_get_content
+    /*public function getMiddlewareTest($middlewareSlug) //test with file_get_content
     {
         foreach ($this->data as $middleware) {
             if ($middleware->slug === $middlewareSlug) {
@@ -146,5 +138,5 @@ class MiddlewareService
         }
 
         return false;
-    }
+    }*/
 }
