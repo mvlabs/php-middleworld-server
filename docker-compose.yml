@@ -1,6 +1,7 @@
 version: '2'
 services:
   php:
+    dns: 8.8.8.8
     build: .
     volumes:
       - ./src:/var/www/html/
