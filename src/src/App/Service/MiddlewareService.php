@@ -51,8 +51,8 @@ class MiddlewareService
         // Update and return middlewares with correct data
         foreach ($results as $key => $result) {
             $parsedResponse = json_decode($result->getBody());
-            $this->data[$key]->stars = strval($parsedResponse->package->github_stars);
-            $this->data[$key]->downloads = strval($parsedResponse->package->downloads->total);
+            $this->data[$key]->stars = $parsedResponse->package->github_stars;
+            $this->data[$key]->downloads = $parsedResponse->package->downloads->total;
         }
 
         return $this->data;
@@ -101,8 +101,8 @@ class MiddlewareService
                 $parsedResponse = json_decode($response->getBody());
 
                 //update stars and DL values before returning
-                $middleware->stars = strval($parsedResponse->package->github_stars);
-                $middleware->downloads = strval($parsedResponse->package->downloads->total);
+                $middleware->stars = $parsedResponse->package->github_stars;
+                $middleware->downloads = $parsedResponse->package->downloads->total;
 
                 return $middleware;
             }
