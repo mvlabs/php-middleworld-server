@@ -4,7 +4,7 @@ require 'recipe/common.php';
 
 // Set configurations
 set('repository', 'ssh://git@git.mvlabs.it:4222/internals/php-middleworld-server.git');
-set('shared_files', []);
+set('shared_files', ['src/config/autoload/middleware-data.local.php']);
 set('shared_dirs', []);
 set('writable_dirs', []);
 
