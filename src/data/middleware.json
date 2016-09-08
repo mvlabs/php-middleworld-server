@@ -1,0 +1,952 @@
+[
+    {
+        "slug" : "accept-header-token",
+        "author" : "Michael Mayer",
+        "shortDescription" : "Accept Header Token Middleware",
+        "description" : "This middleware is part of a set of middlewares to handle CSRF. This one is used for accepting CSRF tokens sent by HTTP headers.",
+        "githubUrl" : "https://github.com/schnittstabil/psr7-csrf-middleware/blob/master/src/Middlewares/AcceptHeaderToken.php",
+        "packagistUrl" : "https://packagist.org/packages/schnittstabil/psr7-csrf-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "accept-method",
+        "author" : "Michael Mayer",
+        "shortDescription" : "Accept Methods Middleware",
+        "description" : "This middleware is part of a set of middlewares to handle CSRF. This one is used for whitelisting certain HTTP methods.",
+        "githubUrl" : "https://github.com/schnittstabil/psr7-csrf-middleware/blob/master/src/Middlewares/AcceptMethods.php",
+        "packagistUrl" : "https://packagist.org/packages/schnittstabil/psr7-csrf-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "accept-parse-body-token",
+        "author" : "Michael Mayer",
+        "shortDescription" : "Accept Parsed BOdy Token Middleware",
+        "description" : "This middleware is part of a set of middlewares to handle CSRF. This one is used for accepting CSRF tokens sent by the request bodies, e.g. `POST`.",
+        "githubUrl" : "https://github.com/schnittstabil/psr7-csrf-middleware/blob/master/src/Middlewares/AcceptParsedBodyToken.php",
+        "packagistUrl" : "https://packagist.org/packages/schnittstabil/psr7-csrf-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "access-log",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Access Log middleware",
+        "description" : "Generates a message using the [Apache's Access Log format](https://httpd.apache.org/docs/2.4/logs.html#accesslog). This middleware requires a [Psr-3](http://www.php-fig.org/psr/psr-3/) compliant logger.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#accesslog",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "acl",
+        "author" : "Glen Eggleton",
+        "shortDescription" : "Access control list middleware",
+        "description" : "Provides an ACL repository and middleware unsing `Zend/Permissions/ACL` library. It inspects the current route and compares it to the list ot accessible resources in a middleware. Returns a `401` is a user is not allowed.",
+        "githubUrl" : "https://github.com/geggleto/geggleto-acl",
+        "packagistUrl" : "https://packagist.org/packages/geggleto/psr7-acl.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "adroit",
+        "author" : "BitExpert AG team",
+        "shortDescription" : "Action domain responder middleware",
+        "description" : "Provides an [ADR](http://pmjones.io/adr/) middleware. The configure the middleware you need provide an array of `\bitExpert\Adroit\Action\Resolver\ActionResolver`, an array of `\bitExpert\Adroit\Responder\Resolver\ResponderResolver` and a action request attribute telling adroit where to look for the action identifier.",
+        "githubUrl" : "https://github.com/bitExpert/adroit",
+        "packagistUrl" : "https://packagist.org/packages/bitexpert/adroit.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "api-problem",
+        "author" : "Leandro Silva",
+        "shortDescription" : "Api problem middleware",
+        "description" : "Returns a formatted json in case of error. It's inspired on the [ApiProblem](https://github.com/zfcampus/zf-api-problem) library, but with fewer dependencies.",
+        "githubUrl" : "https://github.com/Lansoweb/api-problem",
+        "packagistUrl" : "https://packagist.org/packages/los/api-problem.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "asset-manager",
+        "author" : "Vassilis Kanellopoulos",
+        "shortDescription" : "Accet manager middleware",
+        "description" : "A middleware to serve assets from non public directories.",
+        "githubUrl" : "https://github.com/kanellov/assets-manager-middleware",
+        "packagistUrl" : "https://packagist.org/packages/kanellov/assets-manager-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "attribute-mapper",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Attribute mapper middleware",
+        "description" : "Provides the ability to route middleware specific attributes into regular request attributes. It can receive a configuration array specifying how to manage the mapping.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#attributemapper",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "aura-router",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Aura Router middleware",
+        "description" : "Allows the use of [Aura Router](https://github.com/auraphp/Aura.Router) as a middleware. It needs an Aura `RouterContainer` as dependency.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#aurarouter",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "aura-session",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Aura Session middleware",
+        "description" : "Creates a new [Aura Session](https://github.com/auraphp/Aura.Session) instance with the request. It nees an Aura `SessionFactory` as dependency.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#aurasession",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "base-path",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Base path middleware",
+        "description" : "Removes the prefix from the uri path of the request. This is useful to combine with routers if the root of the website is in a subdirectory. For example, if the root of your website is `/web/public`, a request with the uri `/web/public/post/34` will be converted to `/post/34`. You can provide the prefix to remove or let the middleware autodetect it. In the router you can retrieve the prefix removed or a callable to generate more urls with the base path.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#basepath",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "base-path-los",
+        "author" : "Leandro Silva",
+        "shortDescription" : "Base path middleware",
+        "description" : "Removes the prefix from the uri path of the request.",
+        "githubUrl" : "https://github.com/Lansoweb/basepath",
+        "packagistUrl" : "https://packagist.org/packages/los/basepath.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "basic-authentication",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Basic authentication middleware",
+        "description" : "Implements [basic Http authentication](http://php.net/manual/en/features.http-auth.php). It needs to be configured with an array with all users and passwords.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#basicauthentication",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "block-robots",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Block robots middleware",
+        "description" : "Provides the possibility to prevent your site from being indexed by search engines, adding a `X-Robots-Tag` header with `noindex, nofollow` value and a `robots.txt` file with `DIsallow: /` body.",
+        "githubUrl" : "https://github.com/php-middleware/block-robots",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/block-robots.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "block-spam",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Block spam middleware",
+        "description" : "Blocks requests with a spam referral using the [piwik/referrer-spam-blacklist](https://github.com/piwik/referrer-spam-blacklist) list.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#blockspam",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "cache",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Cache middleware",
+        "description" : "Saves the response headers in cache and returns a `304` response (`Not modified`) if the request is cached. It also adds `Cache-Control` and `Last-Modified` headers to the response. You need a cache library compatible with [Psr-6](www.php-fig.org/psr/psr-6). It requires also [micheh/psr7-cache](https://github.com/micheh/psr7-cache).",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#cache",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "client-ip",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Middleware to detect the client ip(s)",
+        "description" : "Tries to detect the ip(s) of the client using the request `Forwarded`, `Forwarded-For`, `Client-Ip`, `X-Forwarded`, `X-Forwarded-For`, `X-Cluster-Client-Ip` headers.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#clientip",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "command",
+        "author" : "Prooph team",
+        "shortDescription" : "Command bus middleware",
+        "description" : "Part of he Prooph ecosystem. Dispatches the message data to the command bus system. The middleware needs a request attribute to create the appropriare message object.",
+        "githubUrl" : "https://github.com/prooph/psr7-middleware/blob/master/src/CommandMiddleware.php",
+        "packagistUrl" : "https://packagist.org/packages/prooph/psr7-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "cors",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Middleware to manage CORS",
+        "description" : "It uses [neomerx/cors-psr7](https://github.com/neomerx/cors-psr7) to manage CORS request. It is configurable through an Neomerx `SettingsStrategyInterface` instance.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#cors",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "csp",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Content security policy middleware",
+        "description" : "It uses the [paragonie/csp-builder](https://github.com/paragonie/csp-builder) library to add the `Content-Security-Policy` header to the response. It is configurable through an array of policies.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#csp",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "csrf",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Cross site request forgery protection middleware",
+        "description" : "To add a protection layer agains CSRF (Cross Site Request Forgery). The middleware injects a hidden input with a token in all `POST` forms and them check whether the token is valid or not. Use `->autoInsert()` to insert automatically the token or, if you prefer, use the generator callable.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#csrf",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "csrf-jwt",
+        "author" : "Marco Pivetta",
+        "shortDescription" : "Cross site request forgery protection middleware using JWT tokens",
+        "description" : "Enables CSRF (Cross Site Request Forgery) protection using JWT tokens, which can be verified, signed and have a specific lifetime on their own.",
+        "githubUrl" : "https://github.com/Ocramius/PSR7Csrf",
+        "packagistUrl" : "https://packagist.org/packages/ocramius/psr7-csrf.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "debug-bar",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Debug bar middleware",
+        "description" : "Inserts the [PHP debug bar](http://phpdebugbar.com/) in the Html body, provinding helpful informations about the Http call. This middleware requires `Middleware::formatNegotiator` to be executed before, to insert the debug bar on in Html responses.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#debugbar",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "debug-bar-php",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Debug bar middleware",
+        "description" : "Provides the possibility to attach the [PHP debug bar](http://phpdebugbar.com/) to your response, both with html or non-html contexts.",
+        "githubUrl" : "https://github.com/php-middleware/phpdebugbar",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/php-debug-bar.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "delay",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Delay middleware",
+        "description" : "Delays the response to simulate slow bandwidth in local environments. You can use a number or an array to generate random values in seconds.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#delay",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "detect-device",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Detect device middleware",
+        "description" : "Uses [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect) to detect whether the request was performed by a mobile device.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#detectdevice",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "digest-authentication",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Digest authentication middleware",
+        "description" : "Implements the [digest Http authentication](http://php.net/manual/en/features.http-auth.php). It needs to be configured with an array with users and passwords.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#digestauthentication",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "encoding-negotiator",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Encoding negotiator middleware",
+        "description" : "Uses [willdurand/Negotiation](https://github.com/willdurand/Negotiation) to detect and negotiate the encoding type of the document.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#encodingnegotiator",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "error-handler",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Error handler middleware",
+        "description" : "Executes an handler if the response returned by the next middleware has an error status code (`400`-`599`). It also catches all the exceptions throwes by the next middlewares.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#errorhandler",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "event",
+        "author" : "Prooph team",
+        "shortDescription" : "Event bus middleware",
+        "description" : "Part of he Prooph ecosystem. Dispatches the message data to the event bus system. The middleware needs a request attribute to create the appropriare message object.",
+        "githubUrl" : "https://github.com/relayphp/Relay.Middleware#exceptionhandler",
+        "packagistUrl" : "https://packagist.org/packages/relay/middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "exception-handler",
+        "author" : "Relay Php team",
+        "shortDescription" : "Exception handler middleware",
+        "description" : "Catches any exceptions that bubble up through the subsequent middleware decorators. It does nothing with the `$request` or `$response`, and passes them directly to `$next` inside a try/catch block. If no exception bubbles up, it returns the `$response` from `$next`. However, if it catches an exception, it returns an entirely new `$response` object with the exception message and an `HTTP 500` status code.",
+        "githubUrl" : "https://github.com/prooph/psr7-middleware/blob/master/src/EventMiddleware.php",
+        "packagistUrl" : "https://packagist.org/packages/prooph/psr7-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "exception-handler-stateless",
+        "author" : "Relay Php team",
+        "shortDescription" : "Stateless exception handler middleware",
+        "description" : "Catches any exceptions that bubble up through the subsequent middleware decorators. It does nothing with the `$request` or `$response`, and passes them directly to `$next` inside a try/catch block. If no exception bubbles up, it returns the `$response` from `$next`. However, if it catches an exception, it returns an entirely new `$response` object with the exception message and an `HTTP 500` status code. This is suitable for use in evironments where it may be used multiple times.",
+        "githubUrl" : "https://github.com/prooph/psr7-middleware/blob/master/src/EventMiddleware.php",
+        "packagistUrl" : "https://packagist.org/packages/prooph/psr7-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "execution-time",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Execution time middleware",
+        "description" : "Computes the execution time of the inner middlewares and stores the result into the `X-Response-Time` response header.",
+        "githubUrl" : "https://github.com/php-middleware/execution-time",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/excecution-time.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "expires",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Expires middleware",
+        "description" : "Adds `Expires` and `max-age` directives of the `Cache-Control` header in the response. It is similar to the apache module [mod_expires](https://httpd.apache.org/docs/current/mod/mod_expires.html). By default uses the same configuration of [h5bp apache configuration](https://github.com/h5bp/server-configs-apache/blob/master/src/web_performance/expires_headers.conf). Useful for static files.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#expires",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "fast-route",
+        "author" : "Oscar Otero",
+        "shortDescription" : "FastRoute middleware",
+        "description" : "Allows the usage of [FastRoute](https://github.com/nikic/FastRoute) as a router. It requires an instance of FastRoute `Dispatcher`.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#fastroute",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "firewall",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Firewall middleware",
+        "description" : "Uses [M6Web/Firewall](https://github.com/M6Web/Firewall) to provide an IP filtering. This middleware depends of `ClientIp` middleware to extract the ip(s) from the headers. See the [allowes ip formats](https://github.com/M6Web/Firewall#entries-formats) for trusted/untrusted options.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#firewall",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "form-content-handler",
+        "author" : "Relay Php team",
+        "shortDescription" : "Form content handler middleware",
+        "description" : "Parses payloads of requests that hanve `application/x-www-form-urleconded` as content type, and makes the parameters available in subsequest middlewares.",
+        "githubUrl" : "https://github.com/relayphp/Relay.Middleware#formcontenthandler",
+        "packagistUrl" : "https://packagist.org/packages/relay/middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "format-negotiator",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Format negotiator middleware",
+        "description" : "Uses [willdurand/Negotiation](https://github.com/willdurand/Negotiation) to detect and negotiate the format of the document using the url extension and/or the `Accept` Http header. It also adds the `Content-Type` header to the response if it is missing.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#formatnegotiator",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "form-timestamp",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Form timestamp middleware",
+        "description" : "Simple spam protection based on injecting a hidden input in all post forms with the current timestamp. On submit, the form checks the time value. If it is older than (for example) 3 seconds ago, assumes it's a bot, so returns a 403 response. You can configure a max number of seconds before the form expires.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#formtimestamp",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "geo-ip",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Geo IP middleware",
+        "description" : "Recognizes location by IP from `ServerRequest` attributes and sets a `geoip_address_collection` attribute with a `\Geocoder\Model\AddressCollection` instance.",
+        "githubUrl" : "https://github.com/php-middleware/geo-ip",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/geo-ip.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "geolocate",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Geolocate middleware",
+        "description" : "Uses [Geocoder](https://github.com/geocoder-php/Geocoder) library to geolocate the client using the ip. This middleware depends on `ClientIp` middleware (to extract the ip(s) from the headers). It needs to receive a Geocoder `Geocoder` instance.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#geolocate",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "google-analytics",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Google analytics middleware",
+        "description" : "Injects the Google Analytics code in all `Html` pages.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#googleanalitycs",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "guard",
+        "author" : "Michael Mayer",
+        "shortDescription" : "Guard Middleware",
+        "description" : "This middleware is part of a set of middlewares to handle CSRF. This one is used as a guard, to check if the request has an attibute set which denotes that it passed CSRF validation.",
+        "githubUrl" : "https://github.com/schnittstabil/psr7-csrf-middleware/blob/master/src/Middlewares/Guard.php",
+        "packagistUrl" : "https://packagist.org/packages/schnittstabil/psr7-csrf-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "gzip",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Gzip middleware",
+        "description" : "Uses gzip functions to compress the response body, inserting also the `Content-Encoding` header.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#gzip",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "honeypot",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Honeypot middleware",
+        "description" : "Implements a honeypot spam prevention. This technique is based on creating a input field that should be invisible and left empty by real users but filled by most spam bots. The middleware scans the html code and inserts this input in all post forms and checks in the incoming requests whether this value exists and is empty (is a real user) or doesn't exist or has a value (is a bot) returning a 403 response.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#honeypot",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "http-authentication",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Http authentication middleware",
+        "description" : "Uses a provided `AuthorizationServiceInterface` instance to check if the application should process the request. Otherwise returns a `401` response.",
+        "githubUrl" : "https://github.com/php-middleware/http-authentication",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/http-authentication.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "http-log",
+        "author" : "Leandro Silva",
+        "shortDescription" : "Http log middleware",
+        "description" : "Thi middleware will log requests and responses in compoct or full mode. It will include `X-Request-Id` and `X-Response-Time` headers if present.",
+        "githubUrl" : "https://github.com/Lansoweb/LosLog#httplog-middleware",
+        "packagistUrl" : "https://packagist.org/packages/los/loslog.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "https",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Https middleware",
+        "description" : "Returns a redirection to the https scheme if the request uri is http. It also adds the [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) header to protect against protocol downgrade attacks and cookie hijacking.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#https",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "i18n",
+        "author" : "Leandro Silva",
+        "shortDescription" : "I18n middleware",
+        "description" : "This middleware provides a list of Languages, Countries and Regions translated to all languages.",
+        "githubUrl" : "https://github.com/Lansoweb/LosI18n",
+        "packagistUrl" : "https://packagist.org/packages/los/losi18ns.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "image-transformer",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Image transformer middleware",
+        "description" : "Uses [imagecow/imagecow](https://github.com/oscarotero/imagecow) to transform images on demand. It can be used to resize, crop, rotate and convert to other formats. It uses the the [imagecow syntax](https://github.com/oscarotero/imagecow#execute-multiple-functions) to define the available sizes. To define the available sizes, you have to assign a filename prefix representing the size, so any requested file with this prefix will be dinamically transformed. It provides also support for [Client hints](https://www.smashingmagazine.com/2016/01/leaner-responsive-images-client-hints/) to avoid to serve images larger than needed (currently supported only in Chrome and Opera). You could also save the transformed images in cache, providig a [Psr-6](www.php-fig.org/psr/psr-6) compatible library.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#imagetransformer",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "json-content-handler",
+        "author" : "Relay Php team",
+        "shortDescription" : "Json content handler middleware",
+        "description" : "Deserializes the `JSON` payload of a request object and makes the parameters available in subsequent middleware decorators. It checks the incoming request for a method other than `GET` and for an `application/json` or `application/vnd.api+json` `Content-Type` header. If it finds both of these, it parses the `JSON` and makes it available as the parsed body of the `$request` before passing it and the `$response` to `$next`.",
+        "githubUrl" : "https://github.com/relayphp/Relay.Middleware#jsoncontenthandler",
+        "packagistUrl" : "https://packagist.org/packages/relay/middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "language-negotiation",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Language negotiation middleware",
+        "description" : "Uses [willdurand/Negotiation](https://github.com/willdurand/Negotiation) to detect and negotiate the client language using the `Accept-Language` header and (optionally) the uri's path. You must provide an array with all available languages.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#languagenegotiation",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "league-route",
+        "author" : "Oscar Otero",
+        "shortDescription" : "League router middleware",
+        "description" : "Allows the usage of [league/route](https://github.com/thephpleague/route) as a middleware. It requires a League `RouteCollection` instance.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#leagueroute",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "log-http",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Log http middleware",
+        "description" : "Provides the possibility to log request and response messages to a provided [Psr-3](http://www.php-fig.org/psr/psr-3/) compliant logger.",
+        "githubUrl" : "https://github.com/php-middleware/log-http-messages",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/log-http-messages.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "maintenance",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Maintenance middleware",
+        "description" : "Returns a response with a `503` status code. It supports `Retry-After` and `Redirect` headers.",
+        "githubUrl" : "https://github.com/php-middleware/maintenance",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/maintenance.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "message",
+        "author" : "Prooph team",
+        "shortDescription" : "Message bus middleware",
+        "description" : "Part of he Prooph ecosystem. Dispatches the message data to the suitable bus system (i.e. command bus, query bus or event bus) depending on message type.",
+        "githubUrl" : "https://github.com/prooph/psr7-middleware/blob/master/src/EventMiddleware.php",
+        "packagistUrl" : "https://packagist.org/packages/prooph/psr7-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "method-override",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Method override middleware",
+        "description" : "Overrides the request method using the `X-Http-Method-Override` header. This is useful for clients unable to send other methods than `GET` and `POST`.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#methodoverride",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "minify",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Minify middleware",
+        "description" : "Uses [mrclay/minify](https://github.com/mrclay/minify) to minify the html, css and js code of the responses.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#minify",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "payload",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Payload middleware",
+        "description" : "Parses the body of the request if it is not parsed and the method is `POST `, `PUT` or `DELETE`. It has support for json, csv and url encoded format.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#payload",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "permission",
+        "author" : "Glenn Eggleton",
+        "shortDescription" : "Permission layer middleware",
+        "description" : "This middleware checks to see if a user has a permission to access a specific resource. It assumes that the middleware is loades with all of the routes the system is applied to and that the user's permission table is loaded into the Requests `permission` attribute. It a user attempts to access a resource he is not allowed, an `Exception` is raised.",
+        "githubUrl" : "https://github.com/geggleto/psr7-permission",
+        "packagistUrl" : "https://packagist.org/packages/geggleto/psr7-permission.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "php-session",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Php session middleware",
+        "description" : "Initializes a [php session](http://php.net/manual/en/book.session.php) using the request data.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#phpsession",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "piwik",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Piwik middleware",
+        "description" : "To use the [Piwik](https://piwik.org/) analytics platform. It injects the javascript code just before the `</body>` closing tag.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#piwik",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "prophiler",
+        "author" : "BitExpert AG team",
+        "shortDescription" : "Prophiler middleware",
+        "description" : "This middleware add a [Prophiler](https://prophiler.fabfuel.de/) to the `Response` object.",
+        "githubUrl" : "https://github.com/bitExpert/prophiler-psr7-middleware",
+        "packagistUrl" : "https://packagist.org/packages/bitexpert/prophiler-psr7-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "query",
+        "author" : "Prooph team",
+        "shortDescription" : "Query bus middleware",
+        "description" : "Part of he Prooph ecosystem. Dispatches the message data to the query bus system. The middleware needs a request attribute to create the appropriare message object.",
+        "githubUrl" : "https://github.com/prooph/psr7-middleware/blob/master/src/QueryMiddleware.php",
+        "packagistUrl" : "https://packagist.org/packages/prooph/psr7-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "rate-limit",
+        "author" : "Leandro Silva",
+        "shortDescription" : "Rate limit middleware",
+        "description" : "Middleware to implement a rate limit. The middleware will look for an `X-Api-Key` header as a key and, ff not found, it will fallback to the remote IP. Each key has its own limit. This middleware does not validate the Api Key, you should add a middleware before this one to validate it.",
+        "githubUrl" : "https://github.com/Lansoweb/LosRateLimit",
+        "packagistUrl" : "https://packagist.org/packages/los/los-rate-limit.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "read-response",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Read response middleware",
+        "description" : "Reads the response content from a file. It is the opposite of `SaveResponse`. The option `continueOnError` changes the behaviour of the middleware to continue with the next middleware if the response file is NOT found and returns directly the response if the file is found. This is useful to use as a file based cache, adding a router middleware (or other readResponses) next in the queue.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#readresponse",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "recaptcha",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Recaptcha middleware",
+        "description" : "To use the [google recaptcha](https://github.com/google/recaptcha) library for spam prevention.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#recaptcha",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "recaptcha-geggleto",
+        "author" : "Glenn Eggleton",
+        "shortDescription" : "Recaptcha middleware",
+        "description" : "This middleware helps you guard your application with [Google ReCaptcha](https://github.com/google/recaptcha).",
+        "githubUrl" : "https://github.com/geggleto/psr7-recaptcha",
+        "packagistUrl" : "https://packagist.org/packages/geggleto/psr7-recaptcha.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "reject",
+        "author" : "Michael Mayer",
+        "shortDescription" : "Reject middleware",
+        "description" : "This middleware is part of a set of middlewares to handle CSRF. This one is used to return a `403 Access Forbidden` response.",
+        "githubUrl" : "https://github.com/schnittstabil/psr7-csrf-middleware/blob/master/src/Middlewares/Reject.php",
+        "packagistUrl" : "https://packagist.org/packages/schnittstabil/psr7-csrf-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "rename",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Rename middleware",
+        "description" : "Renames the request path. This could be useful to rename public paths with a random suffix, for security reasons, or to create pretty urls without using any router. For example to access the path `/static-pages/about-me.php` under the more friendly `/about-me`.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#rename",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "request-id",
+        "author" : "Leandro Silva",
+        "shortDescription" : "Request id middleware",
+        "description" : "Adds a Request ID header that can be used to trace back requests for logging purposes. It uses [Ramsey\Uuid](https://github.com/ramsey/uuid) library for generating ids.",
+        "githubUrl" : "https://github.com/Lansoweb/request-id",
+        "packagistUrl" : "https://packagist.org/packages/los/request-id.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "request-id-php",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Request id middleware",
+        "description" : "This middleware provides framework-agnostic possibility to generate and add to request/response's header Request ID. It requires a `PhpMiddleware\RequestId\RequestIdProviderFactoryInterface` implementation which must create a new `RequestIdProviderInterface` object.",
+        "githubUrl" : "https://github.com/php-middleware/request-id",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/request-id.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "request-simulator",
+        "author" : "Witold Wasiczko",
+        "shortDescription" : "Request simulator middleware",
+        "description" : "Provides the ability to simulate a request passing the simulated request parameters in the actual request body. It may be useful for testing.",
+        "githubUrl" : "https://github.com/php-middleware/request-simulator",
+        "packagistUrl" : "https://packagist.org/packages/php-middleware/request-simulator.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "respond-with-cookie-token",
+        "author" : "Michael Mayer",
+        "shortDescription" : "Respond with cookie token middleware",
+        "description" : "This middleware is part of a set of middlewares to handle CSRF. This one is used for sending CSRF tokens by cookies.",
+        "githubUrl" : "https://github.com/schnittstabil/psr7-csrf-middleware/blob/master/src/Middlewares/RespondWithCookieToken.php",
+        "packagistUrl" : "https://packagist.org/packages/schnittstabil/psr7-csrf-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "respond-with-header-token",
+        "author" : "Michael Mayer",
+        "shortDescription" : "Respond with header token middleware",
+        "description" : "This middleware is part of a set of middlewares to handle CSRF. This one is used for sending CSRF tokens by response headers.",
+        "githubUrl" : "https://github.com/schnittstabil/psr7-csrf-middleware/blob/master/src/Middlewares/RespondWithHeaderToken.php",
+        "packagistUrl" : "https://packagist.org/packages/schnittstabil/psr7-csrf-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "response-sender",
+        "author" : "Relay Php team",
+        "shortDescription" : "Response sender middleware",
+        "description" : "It does nothing with the `$request` or `$response`, passing them immediately to `$next`. Afterwards, it takes the returned `$response` and sends it using `header()` and `echo`, and returns the sent `$response`.",
+        "githubUrl" : "https://github.com/relayphp/Relay.Middleware#responsesender",
+        "packagistUrl" : "https://packagist.org/packages/relay/middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "response-time",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Response time middleware",
+        "description" : "Calculates the response time in milliseconds and saves it into the `X-Response-Time` header.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#responsetime",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "response-time-log",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Response time middleware",
+        "description" : "Calculates the response time and saves it into the `X-Response-Time` header.",
+        "githubUrl" : "https://github.com/Lansoweb/response-time",
+        "packagistUrl" : "https://packagist.org/packages/los/response-time.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "rka-ip-address",
+        "author" : "Rob Allen",
+        "shortDescription" : "Ip address middleware",
+        "description" : "Middleware that determines the client IP address and stores it as an `ServerRequest` attribute called `ip_address`. It checks the  `X-Forwarded-For`, `X-Forwarded`, `X-Cluster-Client-Ip`, `Client-Ip` headers for the first IP address it can find. If none of the headers exist, or do not have a valid IP address, then the `$_SERVER['REMOTE_ADDR']` is used.",
+        "githubUrl" : "https://github.com/akrabat/rka-ip-address-middleware",
+        "packagistUrl" : "https://packagist.org/packages/akrabat/rka-ip-address-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "rka-scheme-and-host-detection",
+        "author" : "Rob Allen",
+        "shortDescription" : "Scheme and host detection middleware",
+        "description" : "Middleware that determines the scheme and host from the `X-Forwarded-Proto` and `X-Forwarded-Host` headers and updates the `Request`'s `Uri` object. You can set a list of proxies that are trusted as the second constructor parameter. If this list is set, then the proxy headers will only be checked if the `REMOTE_ADDR` is in the trusted list.",
+        "githubUrl" : "https://github.com/akrabat/rka-scheme-and-host-detection-middleware",
+        "packagistUrl" : "https://packagist.org/packages/akrabat/rka-scheme-and-host-detection-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "rka-slim-session",
+        "author" : "Rob Allen",
+        "shortDescription" : "Session middleware",
+        "description" : "Middleware to start a native Php session.",
+        "githubUrl" : "https://github.com/akrabat/rka-slim-session-middleware",
+        "packagistUrl" : "https://packagist.org/packages/akrabat/rka-slim-session-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "robots",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Robots middleware",
+        "description" : "Disables the search engine robots for non-production environment. Adds automatically the `X-Robots-Tag: noindex, nofollow, noarchive` header in all responses and returns a default body for `/robots.txt` requests.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#robots",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "save-response",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Save response middleware",
+        "description" : "Saves the response content into a file if all of the following conditions are met: the method is `GET`, the status code is `200`, the `Cache-Control` header does not contain `no-cache` value and the request has no query parameters. This is useful for caching purposes.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#saveresponse",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "session",
+        "author" : "Marco Pivetta",
+        "shortDescription" : "Session middleware",
+        "description" : "Enables session usage storing session data inside a session cookie as a JWT token.",
+        "githubUrl" : "https://github.com/Ocramius/PSR7Session",
+        "packagistUrl" : "https://packagist.org/packages/ocramius/psr7-session.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "session-headers-handler",
+        "author" : "Relay Php team",
+        "shortDescription" : "Session heades handler middleware",
+        "description" : "Normally, PHP will send out headers for you automatically when you call `session_start()`. However, this means the headers are not being sent as part of the response object, and are thus outside your control. This handler puts them back under your control by placing the relevant headers in the response; its behavior is almost identical to the native PHP automatic session headers behavior. For this middleware to work, you must disable the PHP session header management ini settings.",
+        "githubUrl" : "https://github.com/relayphp/Relay.Middleware#sessionheadershandler",
+        "packagistUrl" : "https://packagist.org/packages/relay/middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "session-inject",
+        "author" : "Glenn Eggleton",
+        "shortDescription" : "Session injection middleware",
+        "description" : "This middleware injects your session content into the Request Object.",
+        "githubUrl" : "https://github.com/geggleto/psr7-session",
+        "packagistUrl" : "https://packagist.org/packages/geggleto/psr7-session.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "shutdown",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Shutdown middleware",
+        "description" : "Useful to display a 503 maintenance page. It requires an handler to decide for which pages to display the 503 page.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#shutdown",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "stack",
+        "author" : "Michael Mayer",
+        "shortDescription" : "Stack middleware",
+        "description" : "Middleware to create a stack of middlewares so that the could be used as a single middleware.",
+        "githubUrl" : "https://github.com/schnittstabil/psr7-middleware-stack",
+        "packagistUrl" : "https://packagist.org/packages/schnittstabil/psr7-middleware-stack.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "stack-zobzn",
+        "author" : "Semen Tokarev",
+        "shortDescription" : "Stack middleware",
+        "description" : "Middleware to create a stack of middlewares so that the could be used as a single middleware.",
+        "githubUrl" : "https://github.com/zobzn/psr7-stack",
+        "packagistUrl" : "https://packagist.org/packages/zobzn/psr7-stack.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "trailing-slash",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Trailing slash middleware",
+        "description" : "Removes (or adds) the trailing slash of the path. For example, `/post/23/` will be converted to `/post/23`. If the path is `/` it won't be converted. This could be useful for managing router problems.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#trailingslash",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "user-agent",
+        "author" : "Justinas Rakašis",
+        "shortDescription" : "User agent middleware",
+        "description" : "Determines the client user agent and stores it as a `ServerRequest` attribute.",
+        "githubUrl" : "https://github.com/dopesong/user-agent-middleware",
+        "packagistUrl" : "https://packagist.org/packages/dopesong/user-agent-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "uuid",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Uuid middleware",
+        "description" : "Uses [ramsey/uuid](https://github.com/ramsey/uuid) to generate an Uuid (Universally Unique Identifiers) for each request (compatible with [RFC 4122](http://tools.ietf.org/html/rfc4122) versions 1, 3, 4 and 5). It could be useful for debugging purposes.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#uuid",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "whoops",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Whoops middleware",
+        "description" : "Allows the usage of [Whoops](https://github.com/filp/whoops) as error handler. It requires a Whoops `Run` instance as a dependency.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#whoops",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "www",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Www middleware",
+        "description" : "Adds or removes the `www` subdomain in the host uri and, optionally, returns a redirect response. It will not change the uri if it is `localhost`, an ip based host or if the host already have a subdomain.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#www",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    }
+]
