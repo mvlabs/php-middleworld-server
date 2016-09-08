@@ -495,7 +495,7 @@
         "shortDescription" : "I18n middleware",
         "description" : "This middleware provides a list of Languages, Countries and Regions translated to all languages.",
         "githubUrl" : "https://github.com/Lansoweb/LosI18n",
-        "packagistUrl" : "https://packagist.org/packages/los/losi18ns.json",
+        "packagistUrl" : "https://packagist.org/packages/los/losi18n.json",
         "stars" : 0,
         "downloads" : 0
     },
