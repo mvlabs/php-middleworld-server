@@ -1,0 +1,14 @@
+.job_template: &deployer
+  stage: deploy
+  tags:
+    - php7
+
+stages:
+  - deploy
+
+deploy_production:
+  <<: *deployer
+  script:
+    - "php bin/dep deploy production"
+  only:
+    - master
