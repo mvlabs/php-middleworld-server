@@ -27,7 +27,7 @@ return [
         ],
         [
             'name' => 'middleware-details',
-            'path' => '/v1/middlewares/{middleware-slug:[a-z-]+}',
+            'path' => '/v1/middlewares/{middleware-slug:[a-z0-9-]+}',
             'middleware' => App\Action\MiddlewareDetailsAction::class,
             'allowed_methods' => ['GET'],
         ],
