@@ -19,13 +19,13 @@ services:
       - base
     ports:
       - 5432:5432
-  phppgadmin:
-    image: maxexcloo/phppgadmin
-    networks:
-      - base
-    links:
-      - postgres:postgresql
-    ports:
-      - 8080:80
+#  phppgadmin:
+#    image: maxexcloo/phppgadmin
+#    networks:
+#      - base
+#    links:
+#      - postgres:postgresql
+#    ports:
+#      - 8080:80
 networks:
   base:
