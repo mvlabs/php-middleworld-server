@@ -130,12 +130,32 @@
         "downloads" : 0
     },
     {
+        "slug" : "base-url",
+        "author" : "Mateusz Tymek",
+        "shortDescription" : "Base url middleware",
+        "description" : "Detects base URL of a web application. It is useful when you need your app to be served from a subdirectory.",
+        "githubUrl" : "https://github.com/mtymek/blast-base-url",
+        "packagistUrl" : "https://packagist.org/packages/mtymek/blast-base-url.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "basic-authentication",
         "author" : "Oscar Otero",
         "shortDescription" : "Basic authentication middleware",
         "description" : "Implements [basic Http authentication](http://php.net/manual/en/features.http-auth.php). It needs to be configured with an array with all users and passwords.",
         "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#basicauthentication",
         "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "bear-resource-handler",
+        "author" : "BEAR Team",
+        "shortDescription" : "Bear resource handler middleware",
+        "description" : "A resource handler middleware for the [BEAR framework](http://bearsunday.github.io/). It requires a `ResourceInterface`, a `RouterInterface` and a `RenderInterface`.",
+        "githubUrl" : "https://github.com/bearsunday/BEAR.Middleware",
+        "packagistUrl" : "",
         "stars" : 0,
         "downloads" : 0
     },
@@ -230,6 +250,16 @@
         "downloads" : 0
     },
     {
+        "slug" : "csrf-slim",
+        "author" : "Slim Team",
+        "shortDescription" : "Cross site request forgery protection middleware",
+        "description" : "CSRF (Cross Site Request Forgery) protection applied to all unsagfe HTTP requests (POST, PUT, DELETE, PATCH).",
+        "githubUrl" : "https://github.com/slimphp/Slim-Csrf",
+        "packagistUrl" : "https://packagist.org/packages/slim/csrf.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "debug-bar",
         "author" : "Oscar Otero",
         "shortDescription" : "Debug bar middleware",
@@ -304,7 +334,7 @@
         "author" : "Prooph team",
         "shortDescription" : "Event bus middleware",
         "description" : "Part of he Prooph ecosystem. Dispatches the message data to the event bus system. The middleware needs a request attribute to create the appropriare message object.",
-        "githubUrl" : "https://github.com/relayphp/Relay.Middleware#exceptionhandler",
+        "githubUrl" : "https://github.com/prooph/psr7-middleware/blob/master/src/EventMiddleware.php",
         "packagistUrl" : "https://packagist.org/packages/relay/middleware.json",
         "stars" : 0,
         "downloads" : 0
@@ -314,7 +344,7 @@
         "author" : "Relay Php team",
         "shortDescription" : "Exception handler middleware",
         "description" : "Catches any exceptions that bubble up through the subsequent middleware decorators. It does nothing with the `$request` or `$response`, and passes them directly to `$next` inside a try/catch block. If no exception bubbles up, it returns the `$response` from `$next`. However, if it catches an exception, it returns an entirely new `$response` object with the exception message and an `HTTP 500` status code.",
-        "githubUrl" : "https://github.com/prooph/psr7-middleware/blob/master/src/EventMiddleware.php",
+        "githubUrl" : "https://github.com/relayphp/Relay.Middleware#exceptionhandler",
         "packagistUrl" : "https://packagist.org/packages/prooph/psr7-middleware.json",
         "stars" : 0,
         "downloads" : 0
@@ -470,6 +500,16 @@
         "downloads" : 0
     },
     {
+        "slug" : "http-cache",
+        "author" : "Slim Team",
+        "shortDescription" : "Cache management middleware",
+        "description" : "Manages client side cache",
+        "githubUrl" : "https://github.com/slimphp/Slim-HttpCache",
+        "packagistUrl" : "https://packagist.org/packages/slim/http-cache.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "http-log",
         "author" : "Leandro Silva",
         "shortDescription" : "Http log middleware",
@@ -510,12 +550,42 @@
         "downloads" : 0
     },
     {
+        "slug" : "include-response",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Include response middleware",
+        "description" : "Useful to include old style applications, in which each page has its own php file. This middleware gets the php file, includes it safely, captures the output and the headers and creates a response with the results. If the file does not exits, returns a 404 response (unless continueOnError is true).",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#includeresponse",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "json-content-handler",
         "author" : "Relay Php team",
         "shortDescription" : "Json content handler middleware",
         "description" : "Deserializes the `JSON` payload of a request object and makes the parameters available in subsequent middleware decorators. It checks the incoming request for a method other than `GET` and for an `application/json` or `application/vnd.api+json` `Content-Type` header. If it finds both of these, it parses the `JSON` and makes it available as the parsed body of the `$request` before passing it and the `$response` to `$next`.",
         "githubUrl" : "https://github.com/relayphp/Relay.Middleware#jsoncontenthandler",
         "packagistUrl" : "https://packagist.org/packages/relay/middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "json-schema",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Middleware to validate `application/json` schema on route basis.",
+        "description" : "Uses [justinrainbow/json-schema](https://github.com/justinrainbow/json-schema) to validate an `application/json` request body using route-matched JSON schemas.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#jsonschema",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "json-validator",
+        "author" : "Oscar Otero",
+        "shortDescription" : "Middleware to validate `application/json` schema.",
+        "description" : "Uses [justinrainbow/json-schema](https://github.com/justinrainbow/json-schema) to validate an `application/json` request body with a JSON schemas.",
+        "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#jsonvalidator",
+        "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
         "stars" : 0,
         "downloads" : 0
     },
@@ -780,8 +850,8 @@
         "downloads" : 0
     },
     {
-        "slug" : "response-time-log",
-        "author" : "Oscar Otero",
+        "slug" : "response-time-los",
+        "author" : "Leandro Silva",
         "shortDescription" : "Response time middleware",
         "description" : "Calculates the response time and saves it into the `X-Response-Time` header.",
         "githubUrl" : "https://github.com/Lansoweb/response-time",
