@@ -150,16 +150,6 @@
         "downloads" : 0
     },
     {
-        "slug" : "bear-resource-handler",
-        "author" : "BEAR Team",
-        "shortDescription" : "Bear resource handler middleware",
-        "description" : "A resource handler middleware for the [BEAR framework](http://bearsunday.github.io/). It requires a `ResourceInterface`, a `RouterInterface` and a `RenderInterface`.",
-        "githubUrl" : "https://github.com/bearsunday/BEAR.Middleware",
-        "packagistUrl" : "",
-        "stars" : 0,
-        "downloads" : 0
-    },
-    {
         "slug" : "block-robots",
         "author" : "Witold Wasiczko",
         "shortDescription" : "Block robots middleware",
