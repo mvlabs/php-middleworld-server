@@ -720,6 +720,16 @@
         "downloads" : 0
     },
     {
+        "slug" : "rate-limit-posa",
+        "author" : "Nikola Posa",
+        "shortDescription" : "Rate limit middleware",
+        "description" : "Rate limiting middleware designed for API and/or other application endpoints. The package supports creating different rate limiting strategies based on the `RateLimit/RateLimiterInterface` interface. This implementation does rate limiting based on specified number of requests per time window.",
+        "githubUrl" : "https://github.com/nikolaposa/rate-limit",
+        "packagistUrl" : "https://packagist.org/packages/nikolaposa/rate-limit.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "read-response",
         "author" : "Oscar Otero",
         "shortDescription" : "Read response middleware",
