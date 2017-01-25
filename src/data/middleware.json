@@ -180,6 +180,16 @@
         "downloads" : 0
     },
     {
+        "slug" : "clacks",
+        "author" : "Andreas Heigl",
+        "shortDescription" : "Clacks-Header middleware",
+        "description" : "Implements the Clacks-Header as per [http://www.gnuterrypratchett.com](http://www.gnuterrypratchett.com).",
+        "githubUrl" : "https://github.com/heiglandreas/X-Clacks-Overhead",
+        "packagistUrl" : "https://packagist.org/packages/org_heigl/clacks-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "client-ip",
         "author" : "Oscar Otero",
         "shortDescription" : "Middleware to detect the client ip(s)",
@@ -316,6 +326,16 @@
         "description" : "Executes an handler if the response returned by the next middleware has an error status code (`400`-`599`). It also catches all the exceptions thrown by the next middleware.",
         "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#errorhandler",
         "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "error-handling",
+        "author" : "Prasetyo Wicaksono",
+        "shortDescription" : "Error handling middleware",
+        "description" : "Error handling middleware. Depends on [flip/whoops](https://github.com/filp/whoops) for error formatting and [psr/log](https://github.com/php-fig/log) for abstraction on logging.",
+        "githubUrl" : "https://github.com/praswicaksono/exception-handling-middleware",
+        "packagistUrl" : "https://packagist.org/packages/jowy/exception-handling-middleware.json",
         "stars" : 0,
         "downloads" : 0
     },
@@ -896,6 +916,16 @@
         "description" : "Disables the search engine robots for non-production environment. Adds automatically the `X-Robots-Tag: noindex, nofollow, noarchive` header in all responses and returns a default body for `/robots.txt` requests.",
         "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#robots",
         "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "routing",
+        "author" : "Prasetyo Wicaksono",
+        "shortDescription" : "Routing middleware",
+        "description" : "Routing middleware based on [nikic/fast-route](https://github.com/nikic/FastRoute).",
+        "githubUrl" : "https://github.com/praswicaksono/routing-middleware",
+        "packagistUrl" : "https://packagist.org/packages/jowy/exception-handling-middleware.json",
         "stars" : 0,
         "downloads" : 0
     },
