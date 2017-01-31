@@ -941,11 +941,11 @@
     },
     {
         "slug" : "session",
-        "author" : "Marco Pivetta",
+        "author" : "Marco Pivetta, Jefersson Nathan and Luis Cobucci",
         "shortDescription" : "Session middleware",
         "description" : "Enables session usage storing session data inside a session cookie as a JWT token.",
-        "githubUrl" : "https://github.com/Ocramius/PSR7Session",
-        "packagistUrl" : "https://packagist.org/packages/ocramius/psr7-session.json",
+        "githubUrl" : "https://github.com/psr7-sessions/storageless",
+        "packagistUrl" : "https://packagist.org/packages/psr7-sessions/storageless.json",
         "stars" : 0,
         "downloads" : 0
     },
@@ -976,6 +976,16 @@
         "description" : "Useful to display a 503 maintenance page. It requires an handler to decide for which pages to display the 503 page.",
         "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#shutdown",
         "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "slim-cli",
+        "author" : "Adoni Pavlakis",
+        "shortDescription" : "Mock a GET request to be made through the CLI",
+        "description" : "This middlewares enables making a mock GET request through the CLI and enabling the same application entry point on CLI scripts.",
+        "githubUrl" : "https://github.com/pavlakis/slim-cli",
+        "packagistUrl" : "https://packagist.org/packages/pavlakis/slim-cli.json",
         "stars" : 0,
         "downloads" : 0
     },
