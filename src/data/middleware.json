@@ -220,6 +220,16 @@
         "downloads" : 0
     },
     {
+        "slug" : "cors-tuupola",
+        "author" : "Mika Tuupola",
+        "shortDescription" : "CORS middleware",
+        "description" : "This middleware implements Cross-origin resource sharing. Internally the middleware uses [neomerx/cors-psr7](https://github.com/neomerx/cors-psr7) library for heavy lifting.",
+        "githubUrl" : "https://github.com/tuupola/cors-middleware",
+        "packagistUrl" : "https://packagist.org/packages/tuupola/cors-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "csp",
         "author" : "Oscar Otero",
         "shortDescription" : "Content security policy middleware",
@@ -566,6 +576,16 @@
         "description" : "Useful to include old style applications, in which each page has its own php file. This middleware gets the php file, includes it safely, captures the output and the headers and creates a response with the results. If the file does not exits, returns a 404 response (unless continueOnError is true).",
         "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#includeresponse",
         "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "instrument",
+        "author" : "Mika Tuupola",
+        "shortDescription" : "Middleware for instrumenting PHP applications",
+        "description" : "Companion middleware for Instrument. With [Instrument](https://github.com/tuupola/instrument) you can monitor and measure your PHP application performance. It can collect and store metrics such as script execution time and memory usage or time spent in database. You must have access to [InfluxDB](https://influxdata.com/) database to store the data.",
+        "githubUrl" : "https://github.com/tuupola/instrument-middleware",
+        "packagistUrl" : "https://packagist.org/packages/tuupola/instrument-middleware.json",
         "stars" : 0,
         "downloads" : 0
     },
@@ -980,12 +1000,42 @@
         "downloads" : 0
     },
     {
+        "slug" : "slim-basic-auth",
+        "author" : "Mika Tuupola",
+        "shortDescription" : "HTTP Basic Authentication Middleware",
+        "description" : "This middleware implements HTTP Basic Authentication. It is configurable with an array of users usernames and passwords.",
+        "githubUrl" : "https://github.com/tuupola/slim-basic-auth",
+        "packagistUrl" : "https://packagist.org/packages/tuupola/slim-basic-auth.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "slim-cli",
         "author" : "Adoni Pavlakis",
         "shortDescription" : "Mock a GET request to be made through the CLI",
         "description" : "This middlewares enables making a mock GET request through the CLI and enabling the same application entry point on CLI scripts.",
         "githubUrl" : "https://github.com/pavlakis/slim-cli",
         "packagistUrl" : "https://packagist.org/packages/pavlakis/slim-cli.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "slim-image-resize",
+        "author" : "Mika Tuupola",
+        "shortDescription" : "Image Resize Middleware",
+        "description" : "This middleware implements automatic image resizing based on image filename. You can configure the allowed image extensions and cache folder.",
+        "githubUrl" : "https://github.com/tuupola/slim-image-resize",
+        "packagistUrl" : "https://packagist.org/packages/tuupola/slim-image-resize.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
+        "slug" : "slim-jwt-auth",
+        "author" : "Mika Tuupola",
+        "shortDescription" : "JSON Web Token Authentication",
+        "description" : "This middleware implements JSON Web Token Authentication. It only parses and authenticates a token when passed via header or cookie. This is useful for example when you want to use JSON Web Tokens as API keys.",
+        "githubUrl" : "https://github.com/tuupola/slim-jwt-auth",
+        "packagistUrl" : "https://packagist.org/packages/tuupola/slim-jwt-auth.json",
         "stars" : 0,
         "downloads" : 0
     },
