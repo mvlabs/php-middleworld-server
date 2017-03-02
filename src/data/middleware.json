@@ -800,6 +800,16 @@
         "downloads" : 0
     },
     {
+        "slug" : "recaptcha-sadegh",
+        "author" : "SadeghPM",
+        "shortDescription" : "Google Recaptcha middleware",
+        "description" : "This middleware implement server side Google reCAPCHA v2 validation.",
+        "githubUrl" : "https://github.com/SadeghPM/reCAPCHA",
+        "packagistUrl" : "https://packagist.org/packages/sadegh-pm/recapcha.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "reject",
         "author" : "Michael Mayer",
         "shortDescription" : "Reject middleware",
