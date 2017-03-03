@@ -210,6 +210,16 @@
         "downloads" : 0
     },
     {
+        "slug" : "content-validation",
+        "author" : "Diego Drigani",
+        "shortDescription" : "Validation middleware",
+        "description" : "Content Validation is a middleware for automating validation of incoming input using [Zend InputFilter](https://zendframework.github.io/zend-inputfilter/).",
+        "githubUrl" : "https://github.com/mvlabs/ze-content-validation",
+        "packagistUrl" : "https://packagist.org/packages/mvlabs/ze-content-validation.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "cors",
         "author" : "Oscar Otero",
         "shortDescription" : "Middleware to manage CORS",
