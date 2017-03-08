@@ -980,6 +980,16 @@
         "downloads" : 0
     },
     {
+        "slug" : "server-timing",
+        "author" : "Mika Tuupola",
+        "shortDescription" : "Server timing middleware",
+        "description" : "Implements the [Server-Timing](http://wicg.github.io/server-timing/) header which can be used for displaying server side timing information on Chrome developer console.",
+        "githubUrl" : "https://github.com/tuupola/server-timing-middleware",
+        "packagistUrl" : "https://packagist.org/packages/tuupola/server-timing-middleware.json",
+        "stars" : 0,
+        "downloads" : 0
+    },
+    {
         "slug" : "session",
         "author" : "Marco Pivetta, Jefersson Nathan and Luis Cobucci",
         "shortDescription" : "Session middleware",
