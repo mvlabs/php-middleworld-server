@@ -4,6 +4,7 @@ namespace App\Service;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise;
+use Predis\Client as Redis;
 
 class MiddlewareService
 {
@@ -25,11 +26,11 @@ class MiddlewareService
     private $redisClient;
 
     /**
-     * @param string $data
+     * @param array $data
      * @param Client $client
      * @param \Predis\Client $redisClient
      */
-    public function __construct($data, Client $client, \Predis\Client $redisClient)
+    public function __construct($data, Client $client, Redis $redisClient)
     {
         $this->data = $data;
         $this->client = $client;
