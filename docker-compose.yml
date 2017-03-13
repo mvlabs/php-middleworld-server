@@ -11,6 +11,7 @@ services:
       - base
   redis:
     image: redis:3-alpine
+    container_name: phpmiddleworld-redis
     networks:
       - base
 networks:
