@@ -67,7 +67,7 @@ class MiddlewareService
 
         // Update and return middlewares with correct data
         foreach ($results as $key => $result) {
-            $body = $result->getBody();
+            $body = (string) $result->getBody();
             $this->updateRecord($key, $body);
 
             // put data into cache
@@ -120,7 +120,7 @@ class MiddlewareService
     private function updateCache($key, $body)
     {
         // put data into cache
-        $this->redisClient->set($key, json_encode($body));
+        $this->redisClient->set($key, $body);
         // cache expiration after 24h
         $this->redisClient->expire($key, 60 * 60 * 24);
     }
