@@ -9,10 +9,23 @@ services:
       - 80:80
     networks:
       - base
-  redis:
-    image: redis:3-alpine
-    container_name: phpmiddleworld-redis
+  postgres:
+    image: postgres:9.5
+    environment:
+      - POSTGRES_USER=mvlabs
+      - POSTGRES_PASSWORD=mvlabs
+      - POSTGRES_DB=mvlabs
     networks:
       - base
+    ports:
+      - 5432:5432
+#  phppgadmin:
+#    image: maxexcloo/phppgadmin
+#    networks:
+#      - base
+#    links:
+#      - postgres:postgresql
+#    ports:
+#      - 8080:80
 networks:
   base:
