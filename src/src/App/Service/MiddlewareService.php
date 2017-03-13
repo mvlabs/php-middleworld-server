@@ -50,9 +50,11 @@ class MiddlewareService
 
         // Update and return middlewares with correct data
         foreach ($results as $key => $result) {
-            $parsedResponse = json_decode($result->getBody());
-            $this->data[$key]->stars = $parsedResponse->package->github_stars;
-            $this->data[$key]->downloads = $parsedResponse->package->downloads->total;
+            $body = (string) $result->getBody();
+            $this->updateRecord($key, $body);
+
+            // put data into cache
+            $this->updateCache($key, $body);
         }
 
         return $this->data;
@@ -81,5 +83,25 @@ class MiddlewareService
         }
 
         return false;
+    }
+
+    private function updateRecord($key, $raw)
+    {
+        $parsedResponse = json_decode($raw);
+        $this->data[$key]->stars = $parsedResponse->package->github_stars;
+        $this->data[$key]->downloads = $parsedResponse->package->downloads->total;
+    }
+
+    private function getFromCache($key)
+    {
+        return $this->redisClient->get($key);
+    }
+
+    private function updateCache($key, $body)
+    {
+        // put data into cache
+        $this->redisClient->set($key, $body);
+        // cache expiration after 24h
+        $this->redisClient->expire($key, 60 * 60 * 24);
     }
 }
