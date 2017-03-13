@@ -4,6 +4,7 @@ namespace App\Service;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise;
+use Predis\Client as Redis;
 
 class MiddlewareService
 {
@@ -20,12 +21,20 @@ class MiddlewareService
     private $client;
 
     /**
-     * @param string $data
+     * @var Redis
      */
-    public function __construct($data, Client $client)
+    private $redis;
+
+    /**
+     * @param array $data
+     * @param Client $client
+     * @param Redis $redis
+     */
+    public function __construct($data, Client $client, Redis $redis)
     {
         $this->data = $data;
         $this->client = $client;
+        $this->redis = $redis;
     }
 
     /**
@@ -38,7 +47,15 @@ class MiddlewareService
         //setting values for requests array
 
         foreach ($this->data as $key => $middleware) {
-            $requests[$key] = $this->client->getAsync($middleware->packagistUrl);
+            // try to get the cached value
+            $cached = $this->getFromCache($key);
+            if ($cached) {
+                // cache hit, set the data on the data record
+                $this->updateRecord($key, $cached);
+            } else {
+                // cache miss, forward the request to packagist
+                $requests[$key] = $this->client->getAsync($middleware->packagistUrl);
+            }
         }
 
         // Wait on all of the requests to complete. Throws a ConnectException if any of the requests fail
@@ -66,7 +83,7 @@ class MiddlewareService
      */
     public function getMiddleware($middlewareSlug)
     {
-        foreach ($this->data as $middleware) {
+        foreach ($this->data as $key => $middleware) {
             if ($middleware->slug === $middlewareSlug) {
                 //send a GET request
                 $response = $this->client->request('GET', $middleware->packagistUrl);
@@ -77,6 +94,9 @@ class MiddlewareService
                 //update stars and DL values before returning
                 $middleware->stars = $parsedResponse->package->github_stars;
                 $middleware->downloads = $parsedResponse->package->downloads->total;
+
+                // put data into cache
+                $this->updateCache($key, json_encode($middleware));
 
                 return $middleware;
             }
@@ -94,14 +114,14 @@ class MiddlewareService
 
     private function getFromCache($key)
     {
-        return $this->redisClient->get($key);
+        return $this->redis->get($key);
     }
 
     private function updateCache($key, $body)
     {
         // put data into cache
-        $this->redisClient->set($key, $body);
+        $this->redis->set($key, $body);
         // cache expiration after 24h
-        $this->redisClient->expire($key, 60 * 60 * 24);
+        $this->redis->expire($key, 60 * 60 * 24);
     }
 }
