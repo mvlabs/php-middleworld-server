@@ -108,8 +108,11 @@ class MiddlewareService
     private function updateRecord($key, $raw)
     {
         $parsedResponse = json_decode($raw);
-        $this->data[$key]->stars = $parsedResponse->package->github_stars;
-        $this->data[$key]->downloads = $parsedResponse->package->downloads->total;
+        $stars = $parsedResponse->package->github_stars;
+        $downloads = $parsedResponse->package->downloads->total;
+
+        $this->data[$key]->stars = ((!isset($stars) || is_null($stars)) ? 0 : $stars);
+        $this->data[$key]->downloads = ((!isset($downloads) || is_null($downloads)) ? 0 : $downloads);
     }
 
     private function getFromCache($key)
