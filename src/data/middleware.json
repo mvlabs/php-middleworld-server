@@ -48,7 +48,7 @@
     "slug" : "adroit",
     "author" : "BitExpert AG team",
     "shortDescription" : "Action domain responder middleware",
-    "description" : "Provides an [ADR](http://pmjones.io/adr/) middleware. The configure the middleware you need provide an array of `&#92;bitExpert&#92;Adroit&#92;Action&#92;Resolver&#92;ActionResolver`, an array of `&#92;bitExpert&#92;Adroit&#92;Responder&#92;Resolver&#92;ResponderResolver` and a action request attribute telling adroit where to look for the action identifier.",
+    "description" : "Provides an [ADR](http://pmjones.io/adr/) middleware. To configure the middleware you need provide an array of `&#92;bitExpert&#92;Adroit&#92;Action&#92;Resolver&#92;ActionResolver`, an array of `&#92;bitExpert&#92;Adroit&#92;Responder&#92;Resolver&#92;ResponderResolver` and a action request attribute telling adroit where to look for the action identifier.",
     "githubUrl" : "https://github.com/bitExpert/adroit",
     "packagistUrl" : "https://packagist.org/packages/bitexpert/adroit.json",
     "tags" : ["dp"]
@@ -65,7 +65,7 @@
   {
     "slug" : "asset-manager",
     "author" : "Vassilis Kanellopoulos",
-    "shortDescription" : "Accet manager middleware",
+    "shortDescription" : "Asset manager middleware",
     "description" : "A middleware to serve assets from non public directories.",
     "githubUrl" : "https://github.com/kanellov/assets-manager-middleware",
     "packagistUrl" : "https://packagist.org/packages/kanellov/assets-manager-middleware.json",
