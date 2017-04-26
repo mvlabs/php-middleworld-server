@@ -46,15 +46,15 @@ class MiddlewareService
         $requests = [];
         //setting values for requests array
 
-        foreach ($this->data as $key => $middleware) {
+        foreach ($this->data as $middleware) {
             // try to get the cached value
-            $cached = $this->getFromCache($key);
+            $cached = $this->getFromCache($middleware->slug);
             if ($cached) {
                 // cache hit, set the data on the data record
-                $this->updateRecord($key, $cached);
+                $this->updateRecord($middleware->slug, $cached);
             } else {
                 // cache miss, forward the request to packagist
-                $requests[$key] = $this->client->getAsync($middleware->packagistUrl);
+                $requests[$middleware->slug] = $this->client->getAsync($middleware->packagistUrl);
             }
         }
 
@@ -110,6 +110,10 @@ class MiddlewareService
         $parsedResponse = json_decode($raw);
         $stars = $parsedResponse->package->github_stars;
         $downloads = $parsedResponse->package->downloads->total;
+
+        $key = array_keys(array_filter($this->data, function ($record) use ($key) {
+            return $record->slug === $key;
+        }))[0];
 
         $this->data[$key]->stars = ((!isset($stars) || is_null($stars)) ? 0 : $stars);
         $this->data[$key]->downloads = ((!isset($downloads) || is_null($downloads)) ? 0 : $downloads);
