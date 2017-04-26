@@ -36,6 +36,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "access-log-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Access Log middleware",
+    "description" : "Generates a message using the [Apache's Access Log format](https://httpd.apache.org/docs/2.4/logs.html#accesslog). This middleware requires a [PSR-3](http://www.php-fig.org/psr/psr-3/) compliant logger.",
+    "githubUrl" : "https://github.com/middlewares/access-log",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/access-log.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "acl",
     "author" : "Glen Eggleton",
     "shortDescription" : "Access control list middleware",
@@ -90,6 +99,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "aura-router-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Aura Router middleware",
+    "description" : "Allows the use of [Aura Router](https://github.com/auraphp/Aura.Router) as a middleware. It needs an Aura `RouterContainer` as dependency.",
+    "githubUrl" : "https://github.com/middlewares/aura-router",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/aura-router.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "aura-session",
     "author" : "Oscar Otero",
     "shortDescription" : "Aura Session middleware",
@@ -99,6 +117,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "aura-session-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Aura Session middleware",
+    "description" : "Creates a new [Aura Session](https://github.com/auraphp/Aura.Session) instance with the request. It nees an Aura `SessionFactory` as dependency.",
+    "githubUrl" : "https://github.com/middlewares/aura-session",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/aura-session.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "base-path",
     "author" : "Oscar Otero",
     "shortDescription" : "Base path middleware",
@@ -106,6 +133,15 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#basepath",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "base-path-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Base path middleware",
+    "description" : "Removes the prefix from the uri path of the request. This is useful to combine with routers if the root of the website is in a subdirectory. For example, if the root of your website is `/web/public`, a request with the uri `/web/public/post/34` will be converted to `/post/34`. You can provide the prefix to remove or let the middleware autodetect it. In the router you can retrieve the prefix removed or a callable to generate more urls with the base path.",
+    "githubUrl" : "https://github.com/middlewares/base-path",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/base-path.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "base-path-los",
@@ -162,6 +198,33 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "cache-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Cache middleware",
+    "description" : "Saves the response headers in a [PSR-6](http://www.php-fig.org/psr/psr-6/) cache pool and returns `304` responses (`Not modified`) if the response is still valid. This approach saves server resources and bandwidth because the body is returned empty. It is recomended to combine this middleware with [Expires](http://www.php-middleworld.com/detail/expires-psr-15) to set the lifetime of the responses.",
+    "githubUrl" : "https://github.com/middlewares/cache#cache",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/cache.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "cache-prevention",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Cache prevention middleware",
+    "description" : "Adds the response headers for cache prevention using [micheh/psr7-cache](https://github.com/micheh/psr7-cache). Useful in development environment.",
+    "githubUrl" : "https://github.com/middlewares/cache#cacheprevention",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/cache.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "callable",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Create middleware from callables",
+    "description" : "A simple way to create middlewares using callables with the same signature of a single pass middleware.",
+    "githubUrl" : "https://github.com/middlewares/utils#callablemiddleware",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/utils.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "clacks",
     "author" : "Andreas Heigl",
     "shortDescription" : "Clacks-Header middleware",
@@ -178,6 +241,15 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#clientip",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "client-ip-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Middleware to detect the client ip(s)",
+    "description" : "Tries to detect the ip(s) of the client using the request `Forwarded`, `Forwarded-For`, `Client-Ip`, `X-Forwarded`, `X-Forwarded-For`, `X-Cluster-Client-Ip` headers.",
+    "githubUrl" : "https://github.com/middlewares/client-ip",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/client-ip.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "command",
@@ -207,6 +279,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "cors-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Middleware to manage CORS",
+    "description" : "It uses [neomerx/cors-psr7](https://github.com/neomerx/cors-psr7) to manage CORS request. It is configurable through an Neomerx `SettingsStrategyInterface` instance.",
+    "githubUrl" : "https://github.com/middlewares/cors",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/cors.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "cors-thurster",
     "author" : "Aurimas Niekis",
     "shortDescription" : "Middleware to manage CORS.",
@@ -232,6 +313,15 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#csp",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "csp-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Content security policy middleware",
+    "description" : "Middleware to add the `Content-Security-Policy` header to the response using [paragonie/csp-builder](https://github.com/paragonie/csp-builder) library. It can also handle the CSP error reports using a [PSR-3](http://www.php-fig.org/psr/psr-3/) implementation.",
+    "githubUrl" : "https://github.com/middlewares/csp",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/csp.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "csrf",
@@ -267,6 +357,15 @@
     "description" : "Inserts the [PHP debug bar](http://phpdebugbar.com/) in the Html body, provinding helpful informations about the Http call. This middleware requires `Middleware::formatNegotiator` to be executed before, to insert the debug bar on in Html responses.",
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#debugbar",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
+    "tags" : ["dp"]
+  },
+  {
+    "slug" : "debug-bar-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Debug bar middleware",
+    "description" : "Inserts the [PHP debug bar](http://phpdebugbar.com/) in the Html body, provinding helpful informations about the Http call.",
+    "githubUrl" : "https://github.com/middlewares/debugbar",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/debugbar.json",
     "tags" : ["dp"]
   },
   {
@@ -306,6 +405,33 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "dispatch",
+    "author" : "Woody Gilk",
+    "shortDescription" : "An HTTP Interop compatible middleware dispatcher",
+    "description" : "An HTTP Interop compatible middleware dispatcher in [Equip](https://equipframework.readthedocs.io/). Attempts to be [PSR-1](www.php-fig.org/psr/psr-1), [PSR-2](www.php-fig.org/psr/psr-2), [PSR-4](www.php-fig.org/psr/psr-4), [PSR-7](www.php-fig.org/psr/psr-6), and [PSR-15](https://github.com/php-fig/fig-standards/tree/master/proposed/http-middleware) compliant.",
+    "githubUrl" : "https://github.com/equip/dispatch",
+    "packagistUrl" : "https://packagist.org/packages/equip/dispatch.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "encoder-deflate",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Deflate encoder middleware",
+    "description" : "Middleware to compress the response body to `Deflate` format using [gzdeflate](http://php.net/manual/en/function.gzdeflate.php) and add the `Content-Encoding: deflate` header.",
+    "githubUrl" : "https://github.com/middlewares/encoder#deflateencoder",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/encoder.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "encoder-gzip",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Gzip encoder middleware",
+    "description" : "Middleware to compress the response body to `Gzip` format using [gzencode](http://php.net/manual/en/function.gzencode.php) and add the `Content-Encoding: gzip` header.",
+    "githubUrl" : "https://github.com/middlewares/encoder#gzipencoder",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/encoder.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "encoding-negotiator",
     "author" : "Oscar Otero",
     "shortDescription" : "Encoding negotiator middleware",
@@ -322,6 +448,15 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#errorhandler",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "error-handler-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Error handler middleware",
+    "description" : "Middleware to execute a handler if the response returned by the next middlewares has any error (status code 400-599) or throws a `Middleware/HttpErrorException`. This package provides the `Middleware/HttpErrorException` that you can use to send context-related data to the error handler. The methods `setContext(array $data)` and `getContext()` methods allows to assign and retrieve the error context data used in the error handler.",
+    "githubUrl" : "https://github.com/middlewares/error-handler",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/error-handler.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "error-handling",
@@ -378,6 +513,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "expires-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Expires middleware",
+    "description" : "Adds `Expires` and `Cache-Control: max-age` headers to the response.",
+    "githubUrl" : "https://github.com/middlewares/cache#expires",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/cache.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "fast-route",
     "author" : "Oscar Otero",
     "shortDescription" : "FastRoute middleware",
@@ -387,6 +531,33 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "fast-route-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "FastRoute middleware",
+    "description" : "Allows the usage of [FastRoute](https://github.com/nikic/FastRoute) as a router. It requires an instance of FastRoute `Dispatcher`.",
+    "githubUrl" : "https://github.com/middlewares/fast-route",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/fast-route.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "filesystem-reader",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Filesystem reader middleware",
+    "description" : "Middleware to read responses from files. It uses [Flysystem](http://flysystem.thephpleague.com/) as filesystem handler, so you can use not only a local directories, but also any other adapter like [ftp](http://flysystem.thephpleague.com/adapter/ftp/), [sftp](http://flysystem.thephpleague.com/adapter/sftp/), [dropbox](http://flysystem.thephpleague.com/adapter/dropbox/), etc...",
+    "githubUrl" : "https://github.com/middlewares/filesystem#reader",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/filesystem.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "filesystem-writer",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Filesystem writer middleware",
+    "description" : "Middleware to save response content into a file. It uses [Flysystem](http://flysystem.thephpleague.com/) as filesystem handler, so you can use not only a local directories, but also any other adapter like [ftp](http://flysystem.thephpleague.com/adapter/ftp/), [sftp](http://flysystem.thephpleague.com/adapter/sftp/), [dropbox](http://flysystem.thephpleague.com/adapter/dropbox/), etc...",
+    "githubUrl" : "https://github.com/middlewares/filesystem#writer",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/filesystem.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "firewall",
     "author" : "Oscar Otero",
     "shortDescription" : "Firewall middleware",
@@ -394,6 +565,15 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#firewall",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "firewall-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Firewall middleware",
+    "description" : "Uses [M6Web/Firewall](https://github.com/M6Web/Firewall) to provide an IP filtering. See the [allowes ip formats](https://github.com/M6Web/Firewall#entries-formats) for trusted/untrusted options.",
+    "githubUrl" : "https://github.com/middlewares/firewall",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/firewall.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "form-content-handler",
@@ -441,6 +621,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "geolocation",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Geolocate middleware",
+    "description" : "Middleware to geolocate the client using the ip address and [Geocoder](https://github.com/geocoder-php/Geocoder) and save the result as a request attribute.",
+    "githubUrl" : "https://github.com/middlewares/geolocation",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/geolocation.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "google-analytics",
     "author" : "Oscar Otero",
     "shortDescription" : "Google analytics middleware",
@@ -477,6 +666,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "honeypot-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Honeypot middleware",
+    "description" : "Implements a honeypot spam prevention. This technique is based on creating a input field that should be invisible and left empty by real users but filled by most spam bots. The middleware scans the html code and inserts this input in all post forms and checks in the incoming requests whether this value exists and is empty (is a real user) or doesn't exist or has a value (is a bot) returning a 403 response.",
+    "githubUrl" : "https://github.com/middlewares/honeypot",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/honeypot.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "http-authentication",
     "author" : "Witold Wasiczko",
     "shortDescription" : "HTTP authentication middleware",
@@ -484,6 +682,24 @@
     "githubUrl" : "https://github.com/php-middleware/http-authentication",
     "packagistUrl" : "https://packagist.org/packages/php-middleware/http-authentication.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "http-basic-authentication",
+    "author" : "Oscar Otero",
+    "shortDescription" : "HTTP basic authentication middleware",
+    "description" : "Middleware to implement [Basic access Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) compliant with [RFC 2617](https://tools.ietf.org/html/rfc2617).",
+    "githubUrl" : "https://github.com/middlewares/http-authentication#basicauthentication",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/http-authentication.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "http-digest-authentication",
+    "author" : "Oscar Otero",
+    "shortDescription" : "HTTP digest authentication middleware",
+    "description" : "Middleware to implement [Digest access Authentication](https://en.wikipedia.org/wiki/Digest_access_authentication) compliant with [RFC 2617](https://tools.ietf.org/html/rfc2617).",
+    "githubUrl" : "https://github.com/middlewares/http-authentication#digestauthentication",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/http-authentication.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "http-cache",
@@ -511,6 +727,24 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#https",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "https-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Https middleware",
+    "description" : "Middleware to redirect to `https` if the request is http and add the [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) header to protect against protocol downgrade attacks and cookie hijacking.",
+    "githubUrl" : "https://github.com/middlewares/https",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/https.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "image-manipulation",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Image manipulation middleware",
+    "description" : "Middleware to transform images on demand, allowing resize, crop, rotate and transform to other formats. Uses [imagecow](https://github.com/oscarotero/imagecow) library that can detect and use `Gd` and `Imagick`, and also has support for client hints and different automatic cropping methods.",
+    "githubUrl" : "https://github.com/middlewares/image-manipulation",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/image-manipulation.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "image-transformer",
@@ -630,6 +864,60 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "method-override-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Method override middleware",
+    "description" : "Overrides the request method using the `X-Http-Method-Override` header. This is useful for clients unable to send other methods than `GET` and `POST`.",
+    "githubUrl" : "https://github.com/middlewares/method-override",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/method-override.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "middleland",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Middleware dispatcher",
+    "description" : "Simple (but powerful) [PSR-15](https://github.com/php-fig/fig-standards/blob/master/proposed/http-middleware/middleware.md) middleware dispatcher. It requires a [PSR-7](http://www.php-fig.org/psr/psr-7/) implementation and optionally, a [PSR-11](https://github.com/container-interop/fig-standards/blob/master/proposed/container.md) container implementation.",
+    "githubUrl" : "https://github.com/oscarotero/middleland",
+    "packagistUrl" : "https://packagist.org/packages/oscarotero/middleland.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "middleman",
+    "author" : "Rasmus Schultz",
+    "shortDescription" : "Middleware dispatcher",
+    "description" : "Dead simple [PSR-15](https://github.com/php-fig/fig-standards/blob/master/proposed/http-middleware/middleware.md)/[PSR-7](http://www.php-fig.org/psr/psr-7/) middleware dispatcher. Provides optional integration with a variety of dependency injection containers compliant with [PSR-11](https://github.com/container-interop/fig-standards/blob/master/proposed/container.md).",
+    "githubUrl" : "https://github.com/mindplay-dk/middleman",
+    "packagistUrl" : "https://packagist.org/packages/mindplay/middleman.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "minifier-css",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Css minifier middleware",
+    "description" : "Uses [mrclay/minify](https://github.com/mrclay/minify) to minify css files.",
+    "githubUrl" : "https://github.com/middlewares/minifier#cssminifier",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/minifier.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "minifier-html",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Html minifier middleware",
+    "description" : "Uses [mrclay/minify](https://github.com/mrclay/minify) to minify html responses.",
+    "githubUrl" : "https://github.com/middlewares/minifier#htmlminifier",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/minifier.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "minifier-js",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Javascript minifier middleware",
+    "description" : "Uses [mrclay/minify](https://github.com/mrclay/minify) to minify javascript files.",
+    "githubUrl" : "https://github.com/middlewares/minifier#jsminifier",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/minifier.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "minify",
     "author" : "Oscar Otero",
     "shortDescription" : "Minify middleware",
@@ -639,6 +927,33 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "negotiation-encoding",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Content encoding negotiation middleware",
+    "description" : "Middleware using [wildurand/Negotiation](https://github.com/willdurand/Negotiation) to implement content negotiation. Detects the preferred encoding type using the `Accept-Encoding` header and edits the header with this value.",
+    "githubUrl" : "https://github.com/middlewares/negotiation#contentencoding",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/negotiation.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "negotiation-language",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Content language negotiation middleware",
+    "description" : "Middleware using [wildurand/Negotiation](https://github.com/willdurand/Negotiation) to implement content negotiation. Detects the preferred language using the `Accept-Language` header or the path prefix and edits the header with this value. A `Content-Language` header is also added to the response if it is missing.",
+    "githubUrl" : "https://github.com/middlewares/negotiation#contentlanguage",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/negotiation.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "negotiation-type",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Content type negotiation middleware",
+    "description" : "Middleware using [wildurand/Negotiation](https://github.com/willdurand/Negotiation) to implement content negotiation. Detects the preferred mime type using the `Accept` header and the path extension and edits the header with this value. A `Content-Type` header is also added to the response if it is missing.",
+    "githubUrl" : "https://github.com/middlewares/negotiation#contenttype",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/negotiation.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "payload",
     "author" : "Oscar Otero",
     "shortDescription" : "Payload middleware",
@@ -646,6 +961,33 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#payload",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "payload-csv",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Csv payload middleware",
+    "description" : "Parses the csv payload of the request if it's not parsed and the method is `POST`, `PUT` or `DELETE`.",
+    "githubUrl" : "https://github.com/middlewares/payload#csvpayload",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/payload.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "payload-json",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Json payload middleware",
+    "description" : "Parses the json payload of the request if it's not parsed and the method is `POST`, `PUT` or `DELETE`.",
+    "githubUrl" : "https://github.com/middlewares/payload#jsonpayload",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/payload.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "payload-url-encode",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Url encode payload middleware",
+    "description" : "Parses the url-encoded payload of the request if it's not parsed and the method is `POST`, `PUT` or `DELETE`.",
+    "githubUrl" : "https://github.com/middlewares/payload#urlencodepayload",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/payload.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "permission",
@@ -666,6 +1008,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "php-session-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Php session middleware",
+    "description" : "Middleware to start a [php session](http://php.net/manual/en/book.session.php) using the request data and close it after returning the response.",
+    "githubUrl" : "https://github.com/middlewares/php-session",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/php-session.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "piwik",
     "author" : "Oscar Otero",
     "shortDescription" : "Piwik middleware",
@@ -682,6 +1033,15 @@
     "githubUrl" : "https://github.com/bitExpert/prophiler-psr7-middleware",
     "packagistUrl" : "https://packagist.org/packages/bitexpert/prophiler-psr7-middleware.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "proxy",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Middleware to forward requests and return responses",
+    "description" : "Forwards a request using [Guzzle](http://docs.guzzlephp.org) and returns the received request.",
+    "githubUrl" : "https://github.com/middlewares/proxy",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/proxy.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "query",
@@ -729,6 +1089,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "recaptcha-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Recaptcha middleware",
+    "description" : "Middleware to use [google/recaptcha](https://github.com/google/recaptcha) library for spam prevention. Returns a `403` response if the request is not valid.",
+    "githubUrl" : "https://github.com/middlewares/recaptcha",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/recaptcha.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "recaptcha-geggleto",
     "author" : "Glenn Eggleton",
     "shortDescription" : "Recaptcha middleware",
@@ -745,6 +1114,15 @@
     "githubUrl" : "https://github.com/SadeghPM/reCAPCHA",
     "packagistUrl" : "https://packagist.org/packages/sadegh-pm/recapcha.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "referrer-spam",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Spam referrer blocker middleware",
+    "description" : "Middleware to block referrer spammers using [piwik/referrer-spam-blacklist](https://github.com/piwik/referrer-spam-blacklist). It returns a `403` response if the url host in the Referer header is in the blacklist.",
+    "githubUrl" : "https://github.com/middlewares/referrer-spam",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/referrer-spam.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "reject",
@@ -828,6 +1206,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "response-time-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Response time middleware",
+    "description" : "Calculates the response time in milliseconds and saves it into the `X-Response-Time` header.",
+    "githubUrl" : "https://github.com/middlewares/response-time",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/response-time.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "response-time-los",
     "author" : "Leandro Silva",
     "shortDescription" : "Response time middleware",
@@ -873,6 +1260,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "robots-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Robots middleware",
+    "description" : "Disables the search engine robots for non-production environment. Adds automatically the `X-Robots-Tag: noindex, nofollow, noarchive` header in all responses and returns a default body for `/robots.txt` requests.",
+    "githubUrl" : "https://github.com/middlewares/robots",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/robots.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "routing",
     "author" : "Prasetyo Wicaksono",
     "shortDescription" : "Routing middleware",
@@ -897,7 +1293,7 @@
     "description" : "Implements the [Server-Timing](http://wicg.github.io/server-timing/) header which can be used for displaying server side timing information on Chrome developer console.",
     "githubUrl" : "https://github.com/tuupola/server-timing-middleware",
     "packagistUrl" : "https://packagist.org/packages/tuupola/server-timing-middleware.json",
-    "tags" : ["dp"]
+    "tags" : ["sp","dp"]
   },
   {
     "slug" : "session",
@@ -934,6 +1330,15 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#shutdown",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "shutdown-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Shutdown middleware",
+    "description" : "Useful to display a 503 maintenance page. It requires an handler to decide for which pages to display the 503 page.",
+    "githubUrl" : "https://github.com/middlewares/shutdown",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/shutdown.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "slim-basic-auth",
@@ -990,6 +1395,60 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "stratigility-error-handler",
+    "author" : "Zend Framework Team",
+    "shortDescription" : "Error handler middleware",
+    "description" : "Use this middleware as the outermost (or close to outermost) middleware layer, and use it to intercept PHP errors and exceptions. The functionality of the middleware could be extended via error response generators and listeners.",
+    "githubUrl" : "https://github.com/zendframework/zend-stratigility/blob/master/src/Middleware/ErrorHandler.php",
+    "packagistUrl" : "https://packagist.org/packages/zendframework/zend-stratigility.json",
+    "tags" : ["sp", "dp"]
+  },
+  {
+    "slug" : "stratigility-interop-middleware-wrapper",
+    "author" : "Zend Framework Team",
+    "shortDescription" : "Wraps a callable in a single pass middleware",
+    "description" : "Wraps a callable with a single pass middleware signature in an actual middleware.",
+    "githubUrl" : "https://github.com/zendframework/zend-stratigility/blob/master/src/Middleware/CallableInteropMiddlewareWrapper.php",
+    "packagistUrl" : "https://packagist.org/packages/zendframework/zend-stratigility.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "stratigility-middleware-wrapper",
+    "author" : "Zend Framework Team",
+    "shortDescription" : "Wraps a double pass middleware in a single pass middleware",
+    "description" : "Wraps a callable with a double pass middleware signature in a single pass middleware.",
+    "githubUrl" : "https://github.com/zendframework/zend-stratigility/blob/master/src/Middleware/CallableMiddlewareWrapper.php",
+    "packagistUrl" : "https://packagist.org/packages/zendframework/zend-stratigility.json",
+    "tags" : ["sp"]
+  },
+  {
+    "slug" : "stratigility-not-foud",
+    "author" : "Zend Framework Team",
+    "shortDescription" : "Not found handler middleware",
+    "description" : "Handles the `404` case, providing a standard response.",
+    "githubUrl" : "https://github.com/zendframework/zend-stratigility/blob/master/src/Middleware/NotFoundHandler.php",
+    "packagistUrl" : "https://packagist.org/packages/zendframework/zend-stratigility.json",
+    "tags" : ["sp", "dp"]
+  },
+  {
+    "slug" : "stratigility-original-message",
+    "author" : "Zend Framework Team",
+    "shortDescription" : "Inject attributes containing the original request, response, and URI instances",
+    "description" : "This middleware will add `originalRequest`, `originalResponse` and `originalUri` request attributes. These can then be reference later, for tasks such as determining the base path when generating a URI, determining if changes to the response have occurred or providing prototypes for factories.",
+    "githubUrl" : "https://github.com/zendframework/zend-stratigility/blob/master/src/Middleware/OriginalMessages.php",
+    "packagistUrl" : "https://packagist.org/packages/zendframework/zend-stratigility.json",
+    "tags" : ["dp"]
+  },
+  {
+    "slug" : "stratigility-pipe",
+    "author" : "Zend Framework Team",
+    "shortDescription" : "Middleware pipe",
+    "description" : "This middleware implements a pipeline of middleware, which can be attached using the `pipe()` method. It creates an instance of `Next` internally, invoking it with the provided request and response instances, passing the original request and the returned response to the `$next` argument when complete.",
+    "githubUrl" : "https://github.com/zendframework/zend-stratigility/blob/master/src/MiddlewarePipe.php",
+    "packagistUrl" : "https://packagist.org/packages/zendframework/zend-stratigility.json",
+    "tags" : ["sp", "dp"]
+  },
+  {
     "slug" : "trailing-slash",
     "author" : "Oscar Otero",
     "shortDescription" : "Trailing slash middleware",
@@ -997,6 +1456,15 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#trailingslash",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "trailing-slash-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Trailing slash middleware",
+    "description" : "Middleware to normalize the trailing slash of the uri path. By default removes the slash so, for example, `/post/23/` is converted to `/post/23`. Useful if you have problems with the router.",
+    "githubUrl" : "https://github.com/middlewares/trailing-slash",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/trailing-slash.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "user-agent",
@@ -1017,6 +1485,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "uuid-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Uuid middleware",
+    "description" : "Middleware to generate an UUID (Universally Unique Identifiers) and save it in the `X-Uuid` header of the request and response. Useful for debugging purposes. The UUID generated is compatible with [RFC 4122](http://tools.ietf.org/html/rfc4122) version 4 using [ramsey/uuid](https://github.com/ramsey/uuid) for that.",
+    "githubUrl" : "https://github.com/middlewares/uuid",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/uuid.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "vendor-specific-json-header",
     "author" : "Aurimas Niekis",
     "shortDescription" : "Middleware to use a custom `json` content type header",
@@ -1035,6 +1512,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "whoops-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Whoops middleware",
+    "description" : "Allows the usage of [Whoops](https://github.com/filp/whoops) as error handler. It requires a Whoops `Run` instance as a dependency.",
+    "githubUrl" : "https://github.com/middlewares/whoops",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/whoops.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "www",
     "author" : "Oscar Otero",
     "shortDescription" : "Www middleware",
@@ -1042,5 +1528,14 @@
     "githubUrl" : "https://github.com/oscarotero/psr7-middlewares#www",
     "packagistUrl" : "https://packagist.org/packages/oscarotero/psr7-middlewares.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "www-psr-15",
+    "author" : "Oscar Otero",
+    "shortDescription" : "Www middleware",
+    "description" : "Adds or removes the `www` subdomain in the host uri and, optionally, returns a redirect response. It will not change the uri if it is `localhost`, an ip based host or if the host already have a subdomain.",
+    "githubUrl" : "https://github.com/middlewares/www",
+    "packagistUrl" : "https://packagist.org/packages/middlewares/www.json",
+    "tags" : ["sp"]
   }
 ]
