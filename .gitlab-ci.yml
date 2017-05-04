@@ -10,7 +10,7 @@ stages:
 deploy_production:
   <<: *deployer
   script:
-    - "mv /tmp/deploy.php ."
+    - "cp /tmp/deploy.php ."
     - "php bin/dep deploy production"
   only:
     - master
