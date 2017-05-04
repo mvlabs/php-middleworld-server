@@ -1,7 +1,8 @@
 .job_template: &deployer
   stage: deploy
   tags:
-    - php7
+    - phpmw
+    - server
 
 stages:
   - deploy
@@ -9,6 +10,7 @@ stages:
 deploy_production:
   <<: *deployer
   script:
+    - "mv /tmp/deploy.php ."
     - "php bin/dep deploy production"
   only:
     - master
