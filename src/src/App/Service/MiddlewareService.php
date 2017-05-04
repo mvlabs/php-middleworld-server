@@ -4,6 +4,7 @@ namespace App\Service;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise;
+use Predis\Client as Redis;
 
 class MiddlewareService
 {
@@ -20,12 +21,20 @@ class MiddlewareService
     private $client;
 
     /**
-     * @param string $data
+     * @var Redis
      */
-    public function __construct($data, Client $client)
+    private $redis;
+
+    /**
+     * @param array $data
+     * @param Client $client
+     * @param Redis $redis
+     */
+    public function __construct($data, Client $client, Redis $redis)
     {
         $this->data = $data;
         $this->client = $client;
+        $this->redis = $redis;
     }
 
     /**
@@ -37,8 +46,16 @@ class MiddlewareService
         $requests = [];
         //setting values for requests array
 
-        foreach ($this->data as $key => $middleware) {
-            $requests[$key] = $this->client->getAsync($middleware->packagistUrl);
+        foreach ($this->data as $middleware) {
+            // try to get the cached value
+            $cached = $this->getFromCache($middleware->slug);
+            if ($cached) {
+                // cache hit, set the data on the data record
+                $this->updateRecord($middleware->slug, $cached);
+            } else {
+                // cache miss, forward the request to packagist
+                $requests[$middleware->slug] = $this->client->getAsync($middleware->packagistUrl);
+            }
         }
 
         // Wait on all of the requests to complete. Throws a ConnectException if any of the requests fail
@@ -50,9 +67,11 @@ class MiddlewareService
 
         // Update and return middlewares with correct data
         foreach ($results as $key => $result) {
-            $parsedResponse = json_decode($result->getBody());
-            $this->data[$key]->stars = $parsedResponse->package->github_stars;
-            $this->data[$key]->downloads = $parsedResponse->package->downloads->total;
+            $body = (string) $result->getBody();
+            $this->updateRecord($key, $body);
+
+            // put data into cache
+            $this->updateCache($key, $body);
         }
 
         return $this->data;
@@ -64,7 +83,7 @@ class MiddlewareService
      */
     public function getMiddleware($middlewareSlug)
     {
-        foreach ($this->data as $middleware) {
+        foreach ($this->data as $key => $middleware) {
             if ($middleware->slug === $middlewareSlug) {
                 //send a GET request
                 $response = $this->client->request('GET', $middleware->packagistUrl);
@@ -76,10 +95,40 @@ class MiddlewareService
                 $middleware->stars = $parsedResponse->package->github_stars;
                 $middleware->downloads = $parsedResponse->package->downloads->total;
 
+                // put data into cache
+                $this->updateCache($key, json_encode($middleware));
+
                 return $middleware;
             }
         }
 
         return false;
+    }
+
+    private function updateRecord($key, $raw)
+    {
+        $parsedResponse = json_decode($raw);
+        $stars = $parsedResponse->package->github_stars;
+        $downloads = $parsedResponse->package->downloads->total;
+
+        $key = array_keys(array_filter($this->data, function ($record) use ($key) {
+            return $record->slug === $key;
+        }))[0];
+
+        $this->data[$key]->stars = ((!isset($stars) || is_null($stars)) ? 0 : $stars);
+        $this->data[$key]->downloads = ((!isset($downloads) || is_null($downloads)) ? 0 : $downloads);
+    }
+
+    private function getFromCache($key)
+    {
+        return $this->redis->get($key);
+    }
+
+    private function updateCache($key, $body)
+    {
+        // put data into cache
+        $this->redis->set($key, $body);
+        // cache expiration after 24h
+        $this->redis->expire($key, 60 * 60 * 24);
     }
 }
