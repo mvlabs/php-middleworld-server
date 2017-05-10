@@ -1,31 +1,37 @@
-Simple docker-compose project that provides a php7/postgresql environment:
+Server component for serving [PHP Middleworld](http://www.php-middleworld.com/) data
 
+# USAGE
 
+Clone the repository using
 
-PREREQUISITES:
+```bash
+git clone git@github.com:mvlabs/php-middleworld-server.git
+```
 
-a working docker environment
+The enter in the project directory
 
+```bash
+cd php-middleworld-server/src
+```
 
+And install [Composer](https://getcomposer.org/) dependencies
 
-USAGE:
+```bash
+composer install
+```
 
+Eventually start up the project with
 
+```bash
+cd ..
+docker-compose up
+```
 
-1) pull the repository locally
+At this point you should be able to see something navigating at [localhost:80](http://localhost/).
 
-2) cd into the project root
+# CONTRIBUTING
 
-3) docker-compose up
-
-
-
-WHAT IS PROVIDED:
-
-
-
-there is a php7 webserver serving content from the src/ directory and responding to http://localhost
-
-there is a postgresql database responding to localhost:5432 with username mvlabs and password mvlabs with a database ready to use also called mvlabs.
-
-there is a phppgadmin running on port 8080 (http://localhost:8080) to allow for easy mainteinance.
+If you want to add middleware to [PHP Middleworld](http://www.php-middleworld.com/), or
+edit the existing informations, you could just create a merge request against `develop`
+editing the `src/data/middleware.json` file. We will review it and publish it as soon
+as possible!
