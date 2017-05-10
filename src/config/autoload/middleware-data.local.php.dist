@@ -1,0 +1,7 @@
+<?php
+
+return [
+    'middleware' => [
+        'data' => __DIR__ . '/../../data/middleware.json'
+    ]
+];

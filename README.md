@@ -14,10 +14,18 @@ The enter in the project directory
 cd php-middleworld-server/src
 ```
 
-And install [Composer](https://getcomposer.org/) dependencies
+Install [Composer](https://getcomposer.org/) dependencies
 
 ```bash
 composer install
+```
+
+Create the following local configuration files just by copying their respective `.dist` version
+
+```
+errorhandler.local.php
+local.php
+middleware-data.local.php
 ```
 
 Eventually start up the project with
