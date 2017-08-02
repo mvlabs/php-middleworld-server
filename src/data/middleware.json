@@ -126,6 +126,15 @@
     "tags" : ["sp"]
   },
   {
+    "slug" : "auto-login",
+    "author" : "Popa Tiberiu",
+    "shortDescription" : "Auto login middleware",
+    "description" : "Uses cookies to login automatically the user for the subsequent requests, using an expiring token.",
+    "githubUrl" : "https://github.com/dotkernel/dot-user/blob/master/src/Middleware/AutoLogin.php",
+    "packagistUrl" : "https://packagist.org/packages/dotkernel/dot-user.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "base-path",
     "author" : "Oscar Otero",
     "shortDescription" : "Base path middleware",
@@ -576,6 +585,15 @@
     "tags" : ["sp"]
   },
   {
+    "slug" : "forbidden-error",
+    "author" : "Popa Tiberiu",
+    "shortDescription" : "Middleware to handle authorization errors",
+    "description" : "Handles in a detailed way exceptions due to authorization problems, responding with a 403 status code.",
+    "githubUrl" : "https://github.com/dotkernel/dot-rbac-guard/blob/master/src/Middleware/ForbiddenHandler.php",
+    "packagistUrl" : "https://packagist.org/packages/dotkernel/dot-rbac-guard.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "form-content-handler",
     "author" : "Relay Php team",
     "shortDescription" : "Form content handler middleware",
@@ -927,6 +945,15 @@
     "tags" : ["dp"]
   },
   {
+    "slug" : "navigation",
+    "author" : "Popa Tiberiu",
+    "shortDescription" : "Navigation middleware",
+    "description" : "Sets the route result present in the request in a composed navigation service.",
+    "githubUrl" : "https://github.com/dotkernel/dot-navigation/blob/master/src/NavigationMiddleware.php",
+    "packagistUrl" : "https://packagist.org/packages/dotkernel/dot-navigation.json",
+    "tags" : ["sp"]
+  },
+  {
     "slug" : "negotiation-encoding",
     "author" : "Oscar Otero",
     "shortDescription" : "Content encoding negotiation middleware",
@@ -1069,6 +1096,15 @@
     "githubUrl" : "https://github.com/nikolaposa/rate-limit",
     "packagistUrl" : "https://packagist.org/packages/nikolaposa/rate-limit.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "rbac-guard",
+    "author" : "Popa Tiberiu",
+    "shortDescription" : "Role based access control middleware",
+    "description" : "Implements a role based access control system checking configured guards to access the specific route, returning the correct error response status if authorization fails.",
+    "githubUrl" : "https://github.com/dotkernel/dot-rbac-guard/blob/master/src/Middleware/RbacGuardMiddleware.php",
+    "packagistUrl" : "https://packagist.org/packages/dotkernel/dot-rbac-guard.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "read-response",
@@ -1303,6 +1339,15 @@
     "githubUrl" : "https://github.com/psr7-sessions/storageless",
     "packagistUrl" : "https://packagist.org/packages/psr7-sessions/storageless.json",
     "tags" : ["dp"]
+  },
+  {
+    "slug" : "session-dotkernel",
+    "author" : "Popa Tiberiu",
+    "shortDescription" : "Session middleware",
+    "description" : "Uses PHP native session and cookies to create a persistent session between various requests.",
+    "githubUrl" : "https://github.com/dotkernel/dot-session/blob/master/src/SessionMiddleware.php",
+    "packagistUrl" : "https://packagist.org/packages/dotkernel/dot-session.json",
+    "tags" : ["sp"]
   },
   {
     "slug" : "session-headers-handler",
